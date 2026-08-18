@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Priyanka Baloni — Senior UI/UX & Product Designer</title>
+<meta name="description" content="Priyanka Baloni — Senior UI/UX Designer and Product Designer with 6+ years of experience.">
+<style>
+:root{
+  --bg:#080a0f; --panel:#10141b; --panel2:#151a23; --text:#f4f6f8; --muted:#9ba5b4;
+  --line:rgba(255,255,255,.11); --lime:#d7ff5f; --cyan:#78e6ff; --max:1240px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(#fff .55px,transparent .55px);background-size:5px 5px;z-index:10}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(8,10,15,.65);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav-in{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:-.07em;font-size:24px}.logo span{color:var(--lime)}
+.navlinks{display:flex;gap:26px;font-size:13px;color:#b9c0cb}.navlinks a:hover{color:#fff}
+.navcta{border:1px solid var(--line);padding:10px 16px;border-radius:999px;font-size:12px;font-weight:800}
+.hero{min-height:100vh;display:grid;align-items:center;padding:125px 0 80px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--lime);font-weight:900}
+h1{font-size:clamp(58px,8.5vw,120px);line-height:.88;letter-spacing:-.075em;margin:20px 0 28px;max-width:800px}
+h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.72)}
+.lead{font-size:19px;line-height:1.65;color:#c0c8d3;max-width:690px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:14px 20px;border-radius:999px;font-size:13px;font-weight:900;display:inline-flex;align-items:center;gap:8px}
+.btn-main{background:var(--lime);color:#10130c}.btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.03)}
+.marquee{margin-top:58px;border-block:1px solid var(--line);overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:34px;padding:15px 0;animation:marquee 22s linear infinite;color:#788291;font-size:11px;text-transform:uppercase;letter-spacing:.15em}
+.marquee b{color:#dfe4eb}@keyframes marquee{to{transform:translateX(-50%)}}
+.photo-wrap{position:relative;max-width:540px;margin-left:auto}
+.photo-wrap:before{content:"";position:absolute;inset:30px -18px -18px 30px;border:1px solid rgba(215,255,95,.3);border-radius:28px;transform:rotate(4deg);transition:.5s}
+.photo-wrap:hover:before{transform:rotate(1deg) scale(1.02)}
+.photo{position:relative;z-index:2;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;display:block;filter:saturate(.94);box-shadow:0 30px 90px rgba(0,0,0,.45)}
+.float{position:absolute;z-index:3;background:rgba(13,17,23,.92);border:1px solid var(--line);backdrop-filter:blur(15px);border-radius:16px;padding:14px 16px;font-size:12px;box-shadow:0 18px 40px rgba(0,0,0,.3);animation:float 4s ease-in-out infinite}
+.float strong{display:block;font-size:19px;color:var(--lime);letter-spacing:-.03em}.f1{left:-25px;bottom:55px}.f2{right:-20px;top:50px;animation-delay:-1.5s}
+@keyframes float{50%{transform:translateY(-10px)}}
+section{padding:125px 0}.section-top{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:48px}
+.section-num{font-size:11px;color:var(--lime);letter-spacing:.18em;font-weight:900}.section-title{font-size:clamp(42px,6vw,76px);line-height:.95;letter-spacing:-.065em;margin:12px 0 0}.section-copy{max-width:430px;color:var(--muted);line-height:1.7}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.about-main,.mini{border:1px solid var(--line);background:linear-gradient(145deg,#11161f,#0d1016);border-radius:26px}
+.about-main{padding:40px}.about-main p{font-size:24px;line-height:1.45;color:#dbe0e8;letter-spacing:-.025em}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.mini{padding:26px;display:flex;flex-direction:column;justify-content:space-between;min-height:190px}.mini strong{font-size:38px;letter-spacing:-.06em;color:var(--lime)}.mini span{color:var(--muted);font-size:13px}
+.work-list{display:grid;gap:22px}.work-card{position:relative;display:grid;grid-template-columns:1fr .75fr;min-height:410px;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:var(--panel);transition:transform .45s,border-color .45s}.work-card:hover{transform:translateY(-6px);border-color:rgba(215,255,95,.45)}
+.work-info{padding:40px;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:2}.project-label{font-size:11px;letter-spacing:.18em;color:var(--lime);font-weight:900}.work-info h3{font-size:clamp(38px,5vw,64px);letter-spacing:-.065em;line-height:.95;margin:16px 0}.work-info p{color:#aeb7c4;max-width:530px;line-height:1.7}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.chip{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:7px 10px;color:#b8c1cd}
+.visual{position:relative;min-height:410px;overflow:hidden;background:radial-gradient(circle at 60% 40%,rgba(120,230,255,.18),transparent 38%),linear-gradient(135deg,#1a2431,#0e1218)}
+.visual:before{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-80px;top:-70px;border:1px solid rgba(120,230,255,.35);box-shadow:0 0 0 35px rgba(120,230,255,.035),0 0 0 70px rgba(120,230,255,.025)}
+.ui-window{position:absolute;background:#f7f9fc;color:#17202a;border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.4);padding:14px;transition:transform .55s}.work-card:hover .ui-window{transform:translateY(-10px) rotate(-1deg)}
+.w1{width:62%;height:55%;top:22%;left:15%;transform:rotate(-4deg)}.w2{width:42%;height:42%;top:38%;right:7%;transform:rotate(6deg);background:#101821;color:#fff;border:1px solid #2a3a4d}.w3{width:46%;height:25%;bottom:7%;left:8%;transform:rotate(3deg)}
+.bar{height:8px;background:#dce3eb;border-radius:99px;margin-bottom:10px}.darkbar{background:#2d3b4a}.line{height:6px;background:#e8edf2;border-radius:99px;margin:8px 0}.block{height:48px;background:#eaf1f4;border-radius:10px;margin-top:12px}.darkblock{background:#1d2a37}
+.more{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.more-card{padding:28px;border:1px solid var(--line);border-radius:22px;background:#0e1218;min-height:190px}.more-card h4{font-size:22px;margin:14px 0 7px;letter-spacing:-.035em}.more-card p{color:var(--muted);font-size:13px;line-height:1.6}
+.timeline{border-left:1px solid #34404e;margin-left:8px}.job{position:relative;padding:0 0 55px 34px}.job:before{content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 5px var(--bg)}.job-top{display:flex;justify-content:space-between;gap:20px}.job h3{font-size:25px;margin:0}.company{color:var(--lime);font-size:13px;font-weight:800;margin-top:4px}.date{color:#737f8f;font-size:12px}.job p,.job li{color:#9da8b7;font-size:14px;line-height:1.7}.job ul{margin-top:15px}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:18px}.skill{padding:30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#11161e,#0c0f14)}.skill h3{margin:0 0 18px;font-size:18px}.tag{display:inline-block;padding:8px 11px;border:1px solid var(--line);border-radius:999px;margin:4px;color:#aeb7c4;font-size:12px}.tag:hover{color:#0d1116;background:var(--lime)}
+.contact{border-radius:30px;padding:70px 45px;background:linear-gradient(135deg,#d7ff5f,#92d9f0);color:#0b1015;position:relative;overflow:hidden}.contact h2{font-size:clamp(48px,7vw,92px);letter-spacing:-.07em;line-height:.9;max-width:800px;margin:15px 0 24px}.contact p{max-width:650px;color:#33404c}.contact .btn-main{background:#0b1015;color:#fff}.contact .btn-ghost{border-color:rgba(11,16,21,.25)}
+footer{padding:35px 0 50px;color:#687381;font-size:12px;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
+.cursor{position:fixed;width:18px;height:18px;border:1px solid var(--lime);border-radius:50%;pointer-events:none;z-index:100;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .2s,height .2s}
+@media(max-width:850px){
+  .navlinks{display:none}.hero-grid,.about{grid-template-columns:1fr}.photo-wrap{max-width:520px;margin:25px auto 0}.more{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.work-card{grid-template-columns:1fr}.visual{min-height:330px}.section-top{display:block}.section-copy{margin-top:16px}.job-top{display:block}.date{margin-top:6px}.f1{left:5px}.f2{right:5px}
+}
+@media(max-width:560px){
+  .wrap{width:min(var(--max),calc(100% - 28px))}.nav-in{height:68px}.hero{padding-top:100px}section{padding:85px 0}.about-main{padding:28px}.about-main p{font-size:20px}.mini-grid{gap:10px}.mini{padding:20px;min-height:150px}.work-info{padding:28px}.contact{padding:45px 25px}footer{display:block}.hero-actions .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">PB<span>.</span></a>
+    <div class="navlinks"><a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a></div>
+    <a class="navcta" href="#contact">Let's talk ↗</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal">
+        <div class="kicker">Senior UI/UX Designer · Product Designer</div>
+        <h1>I design <em>digital</em> products that feel clear.</h1>
+        <p class="lead">6+ years designing scalable web and mobile experiences across SaaS, Enterprise, FinTech, EdTech, CRM, Gaming, E-commerce, Logistics and Healthcare.</p>
+        <div class="hero-actions">
+          <a class="btn btn-main" href="#work">Explore my work ↓</a>
+          <a class="btn btn-ghost" href="Priyanka-Baloni-Resume.pdf" download>Download resume</a>
+        </div>
+      </div>
+      <div class="photo-wrap reveal">
+        <img class="photo" src="priyanka-hero.png" alt="Priyanka Baloni — Product Designer">
+        <div class="float f1"><strong>6+</strong>years experience</div>
+        <div class="float f2"><strong>End-to-end</strong>product design</div>
+      </div>
+    </div>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Product Design</span><b>✦</b><span>Enterprise UX</span><b>✦</b><span>Design Systems</span><b>✦</b><span>Complex Workflows</span><b>✦</b><span>Product Strategy</span><b>✦</b>
+        <span>Product Design</span><b>✦</b><span>Enterprise UX</span><b>✦</b><span>Design Systems</span><b>✦</b><span>Complex Workflows</span><b>✦</b><span>Product Strategy</span><b>✦</b>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+<div class="wrap reveal">
+  <div class="section-top"><div><div class="section-num">01 / ABOUT</div><h2 class="section-title">Design with<br>product thinking.</h2></div><p class="section-copy">I turn complex business requirements into scalable, user-friendly experiences — from discovery and information architecture to high-fidelity UI, design systems and developer handoff.</p></div>
+  <div class="about">
+    <div class="about-main"><p>My work sits at the intersection of <strong>business goals, user needs and visual systems.</strong> I enjoy making complicated products easier to understand, navigate and use.</p></div>
+    <div class="mini-grid">
+      <div class="mini"><strong>8+</strong><span>Product domains</span></div>
+      <div class="mini"><strong>03</strong><span>Featured case studies</span></div>
+      <div class="mini"><strong>Web</strong><span>Responsive product experiences</span></div>
+      <div class="mini"><strong>UX → UI</strong><span>End-to-end ownership</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="work">
+<div class="wrap">
+  <div class="section-top reveal"><div><div class="section-num">02 / SELECTED WORK</div><h2 class="section-title">Selected<br>products.</h2></div><p class="section-copy">A visual-first snapshot of enterprise SaaS, marketplace and business-management products from my professional experience.</p></div>
+  <div class="work-list">
+    <article class="work-card reveal">
+      <div class="work-info">
+        <div><div class="project-label">01 · INTOTO</div><h3>Intoto</h3><p>Enterprise SaaS platform for the international student recruitment and admissions lifecycle — bringing universities, students, recruitment partners, ambassadors and administrators into one ecosystem.</p><div class="chips"><span class="chip">EdTech</span><span class="chip">CRM</span><span class="chip">Enterprise SaaS</span><span class="chip">Dashboards</span><span class="chip">Complex workflows</span></div></div>
+        <a class="btn btn-ghost" href="#intoto">Explore project ↗</a>
+      </div>
+      <div class="visual">
+        <div class="ui-window w1"><div class="bar"></div><div class="line" style="width:55%"></div><div class="block"></div><div class="line" style="width:80%"></div><div class="line" style="width:65%"></div></div>
+        <div class="ui-window w2"><div class="bar darkbar"></div><div class="darkblock"></div><div class="line darkbar" style="width:70%"></div><div class="line darkbar" style="width:52%"></div></div>
+        <div class="ui-window w3"><div class="line" style="width:75%"></div><div class="line" style="width:45%"></div><div class="line" style="width:60%"></div></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal">
+      <div class="work-info">
+        <div><div class="project-label">02 · BEING INDIAN</div><h3>Being Indian</h3><p>Business discovery and networking platform connecting users with verified local businesses, while giving organizations tools for listings, ads, blogs and events.</p><div class="chips"><span class="chip">Marketplace</span><span class="chip">Media</span><span class="chip">Community</span><span class="chip">Admin</span></div></div>
+        <a class="btn btn-ghost" href="#being-indian">Explore project ↗</a>
+      </div>
+      <div class="visual" style="background:radial-gradient(circle at 35% 45%,rgba(215,255,95,.16),transparent 35%),linear-gradient(135deg,#202018,#10130e)">
+        <div class="ui-window w1"><div class="bar"></div><div class="block"></div><div class="line" style="width:70%"></div><div class="line" style="width:48%"></div></div>
+        <div class="ui-window w2"><div class="bar darkbar"></div><div class="darkblock"></div><div class="line darkbar" style="width:65%"></div></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal">
+      <div class="work-info">
+        <div><div class="project-label">03 · BUSINESSBAY</div><h3>BusinessBay</h3><p>AI-powered all-in-one business platform combining leads, CRM, ERP, marketplace listings, payments, POS, AI chatbots, NFC business cards and analytics.</p><div class="chips"><span class="chip">AI</span><span class="chip">SaaS</span><span class="chip">CRM</span><span class="chip">ERP</span><span class="chip">Marketplace</span></div></div>
+        <a class="btn btn-ghost" href="#businessbay">Explore project ↗</a>
+      </div>
+      <div class="visual" style="background:radial-gradient(circle at 65% 40%,rgba(215,255,95,.15),transparent 38%),linear-gradient(135deg,#18211d,#0e1210)">
+        <div class="ui-window w1"><div class="bar"></div><div class="block"></div><div class="line" style="width:80%"></div><div class="line" style="width:60%"></div></div>
+        <div class="ui-window w2"><div class="bar darkbar"></div><div class="darkblock"></div><div class="line darkbar" style="width:70%"></div></div>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="intoto">
+<div class="wrap reveal">
+  <div class="section-top"><div><div class="section-num">CASE STUDY · 01</div><h2 class="section-title">Intoto<br>Enterprise SaaS.</h2></div><p class="section-copy">A complex ecosystem simplified into role-based journeys, responsive dashboards and guided workflows.</p></div>
+  <div class="more">
+    <div class="more-card"><div class="project-label">SCOPE</div><h4>Full lifecycle</h4><p>Lead & CRM → Application → Documents → Offer & Admission → Visa → Onboarding → Analytics.</p></div>
+    <div class="more-card"><div class="project-label">ROLE</div><h4>Product Designer</h4><p>User journeys, IA, wireframes, interactive prototypes, high-fidelity UI and design system.</p></div>
+    <div class="more-card"><div class="project-label">DESIGN FOCUS</div><h4>Complex workflows</h4><p>Made multi-step admission and visa processes clearer and easier to navigate across roles.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="experience">
+<div class="wrap reveal">
+  <div class="section-top"><div><div class="section-num">03 / EXPERIENCE</div><h2 class="section-title">Career<br>timeline.</h2></div><p class="section-copy">From UI/Graphic Design to senior product design across enterprise and consumer products.</p></div>
+  <div class="timeline">
+    <div class="job"><div class="job-top"><div><h3>Senior UI/UX Designer</h3><div class="company">Metaversity Technologies Pvt. Ltd.</div></div><div class="date">Sep 2022 — Present</div></div><p>End-to-end product design across EdTech, SaaS, FinTech, CRM, Enterprise Applications, E-commerce and Gaming.</p><ul><li>Led UX for enterprise modules, user journeys, IA, wireframes and prototypes.</li><li>Built a scalable design system and reusable component library.</li><li>Designed responsive dashboards for university, student, agent and admin roles.</li><li>Simplified complex admission and visa workflows.</li></ul></div>
+    <div class="job"><div class="job-top"><div><h3>UI/UX Designer</h3><div class="company">Techbeliever Technologies (Khiladi Adda)</div></div><div class="date">Dec 2021 — Aug 2022</div></div><p>Designed fantasy gaming and micro eSports experiences across web and mobile.</p><ul><li>Wallet, tournament, contest, profile, leaderboard and gameplay interfaces.</li><li>User flows, prototypes, dashboards and reusable components.</li></ul></div>
+    <div class="job"><div class="job-top"><div><h3>UI/Graphic Designer</h3><div class="company">Appsmediaz Technologies</div></div><div class="date">Jul 2020 — Nov 2021</div></div><p>Designed responsive websites and mobile applications for business and healthcare-focused products, alongside branding assets and client work.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="wrap reveal">
+  <div class="section-top"><div><div class="section-num">04 / CAPABILITIES</div><h2 class="section-title">Skills &<br>toolkit.</h2></div><p class="section-copy">A practical toolkit for solving product problems from structure to final interface.</p></div>
+  <div class="skills">
+    <div class="skill"><h3>Product Design</h3><span class="tag">Problem Solving</span><span class="tag">User Research</span><span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">Interaction Design</span><span class="tag">Design Systems</span><span class="tag">Accessibility</span><span class="tag">Responsive Design</span><span class="tag">Usability Testing</span></div>
+    <div class="skill"><h3>Domains</h3><span class="tag">SaaS</span><span class="tag">Enterprise</span><span class="tag">FinTech / Trading</span><span class="tag">EdTech</span><span class="tag">CRM</span><span class="tag">Gaming</span><span class="tag">E-commerce</span><span class="tag">Marketplace</span></div>
+    <div class="skill"><h3>Tools</h3><span class="tag">Figma</span><span class="tag">Adobe Creative Suite</span><span class="tag">Adobe XD</span><span class="tag">Sketch</span><span class="tag">Canva</span><span class="tag">CorelDraw</span></div>
+    <div class="skill"><h3>Education</h3><p style="color:#9da8b7;line-height:1.8;margin:0">Bachelor of Arts (Economics) — University of Delhi<br>UI/UX & Graphic Design — Syntax World</p></div>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap reveal">
+  <div class="contact">
+    <div class="kicker" style="color:#16202a">05 / CONTACT</div>
+    <h2>Have a product problem worth solving?</h2>
+    <p>I'm open to product design, UI/UX and enterprise design opportunities.</p>
+    <div class="hero-actions"><a class="btn btn-main" href="mailto:Priyabidaliya@gmail.com">Priyabidaliya@gmail.com ↗</a><a class="btn btn-ghost" href="tel:+919555517177">+91 9555517177</a></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="wrap"><span>© 2026 Priyanka Baloni</span><span>Senior UI/UX Designer · Product Designer</span></footer>
+
+<script>
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const c=document.getElementById('cursor');
+window.addEventListener('pointermove',e=>{c.style.left=e.clientX+'px';c.style.top=e.clientY+'px'});
+document.querySelectorAll('a,.work-card,.tag').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{c.style.width='34px';c.style.height='34px'});
+  el.addEventListener('mouseleave',()=>{c.style.width='18px';c.style.height='18px'});
+});
+</script>
+</body>
+</html>
