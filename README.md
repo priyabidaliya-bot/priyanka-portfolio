@@ -9,3 +9,4 @@ Files:
 
 Deployment:
 Upload the folder contents to Vercel using the same Drop to Deploy flow.
+Latest portfolio deployment.
