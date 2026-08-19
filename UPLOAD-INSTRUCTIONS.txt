@@ -1,0 +1,22 @@
+PRIYANKA BALONI PORTFOLIO V5
+
+IMPORTANT:
+Upload the ENTIRE contents of this folder to Vercel.
+Do NOT upload only the HTML files.
+The assets folder is required for all project images.
+
+Required structure:
+index.html
+case-intoto.html
+case-businessbay.html
+case-being-indian.html
+vercel.json
+assets/
+  priyanka.png
+  intoto-*.png
+  business-*.png
+  being-*.png
+  resume.pdf
+  project-management-certificate.pdf
+
+The image paths are root-based (/assets/...) so they work on the Vercel production domain and on all case-study pages.
