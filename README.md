@@ -1,12 +1,10 @@
-# Priyanka Baloni Portfolio — V2
-Premium motion-first responsive portfolio based on the supplied resume and uploaded professional photos.
+# Priyanka Baloni Portfolio — V3
 
-Files:
+Upload all files in this folder to the same GitHub Pages/repository location:
 - index.html
-- priyanka-hero.png
 - priyanka-profile.png
-- Priyanka-Baloni-Resume.pdf
+- priyanka-hero.png
 
-Deployment:
-Upload the folder contents to Vercel using the same Drop to Deploy flow.
-Latest portfolio deployment.
+External profiles:
+- LinkedIn: https://www.linkedin.com/in/priyanka-baloni-a402b1214/
+- Behance: https://www.behance.net/priyankabaloni
