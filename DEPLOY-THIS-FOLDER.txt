@@ -1,0 +1,7 @@
+DEPLOYMENT INSTRUCTION
+
+Use the files INSIDE this folder as the Vercel project root.
+Do NOT upload this ZIP as a nested folder.
+The Vercel root must directly contain index.html, case-*.html, assets/, vercel.json.
+
+Before replacing the live site, preview the deployment and verify: logo, hero photo, all 3 project cards, and case-study images.
