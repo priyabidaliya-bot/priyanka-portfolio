@@ -15,13 +15,37 @@
   .hero .reveal .eyebrow{margin-top:18px;font-size:10px}
 }
 </style>
+
+<style>
+.being-modal{position:fixed;inset:0;z-index:100;display:none;background:rgba(4,6,8,.92);backdrop-filter:blur(18px);padding:28px;overflow:auto}
+.being-modal.open{display:flex;align-items:center;justify-content:center}
+.being-modal-inner{width:min(1120px,100%);max-height:92vh;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:24px;background:#0b0f14;box-shadow:0 30px 100px rgba(0,0,0,.65);overflow:hidden}
+.being-modal-top{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--line)}
+.being-modal-top strong{font-size:13px}
+.being-counter{color:#8b98a6;font-size:10px}
+.being-close{border:1px solid var(--line);background:rgba(255,255,255,.04);color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px}
+.being-view{position:relative;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:22px 70px;background:#080b0f}
+.being-view img{max-width:100%;max-height:68vh;width:auto;height:auto;object-fit:contain;border-radius:14px}
+.being-nav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(7,9,12,.9);color:#fff;cursor:pointer;font-size:20px}
+.being-prev{left:18px}.being-next{right:18px}
+.being-thumbs{display:flex;gap:8px;padding:12px 16px;overflow-x:auto;border-top:1px solid var(--line)}
+.being-thumb{flex:0 0 70px;height:48px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#0a0e13;cursor:pointer;opacity:.55}
+.being-thumb.active{opacity:1;border-color:var(--lime)}
+.being-thumb img{width:100%;height:100%;object-fit:contain}
+@media(max-width:560px){
+  .being-modal{padding:10px}.being-modal-inner{max-height:96vh;border-radius:18px}
+  .being-view{padding:18px 44px}.being-view img{max-height:62vh}
+  .being-nav{width:34px;height:34px}.being-prev{left:8px}.being-next{right:8px}
+  .being-thumbs{padding:8px}.being-thumb{flex-basis:58px;height:40px}
+}
+</style>
 </head><body><nav class="nav"><div class="wrap navin"><a class="brand" href="index.html"><img src="assets/priyanka.jpg" alt="Priyanka Baloni"><span>PRIYANKA BALONI</span></a><div class="links"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#skills">Skills</a><a href="index.html#certifications">Certifications</a></div><div class="navcta"><a class="pill" href="assets/resume.pdf" target="_blank">Resume ↗</a><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a></div></div></nav><main>
 <section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1>Hi, I'm Priyanka Baloni.</h1><div class="eyebrow">SENIOR UI/UX DESIGNER · PRODUCT DESIGNER</div><p class="lead">6+ years designing scalable web and mobile experiences across SaaS, Enterprise, FinTech, EdTech, CRM, E-commerce, Logistics and Healthcare — from discovery and UX architecture to high-fidelity UI and developer handoff.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn ghost" href="mailto:Priyabidaliya@gmail.com">Let’s work together ↗</a></div><div class="actions"><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a><a class="pill" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div><div class="photo reveal"><img src="assets/priyanka.jpg" alt="Priyanka Baloni"><div class="badge one"><b>6+</b>years experience</div><div class="badge two"><b>End-to-end</b>product design</div></div></div></section>
 <div class="marquee"><div class="wrap track"><b>PRODUCT DESIGN</b><span>UX RESEARCH</span><span>INFORMATION ARCHITECTURE</span><span>DESIGN SYSTEMS</span><span>PROTOTYPING</span><span>DEVELOPER HANDOFF</span><b>PRODUCT DESIGN</b><span>UX RESEARCH</span></div></div>
 <section id="work"><div class="wrap"><div class="head reveal"><div><div class="label">01 / SELECTED WORK</div><h2 class="title">Products I’ve<br>helped shape.</h2></div><p class="copy">Three products with different audiences, business models and complexity — connected by the same focus: making digital experiences easier to understand and use.</p></div><div class="projects">
 <article class="project reveal"><div class="project-info"><div><div class="label">01 · INTOTO</div><h3>Intoto</h3><p>End-to-end student and university ecosystem spanning discovery, applications, communities, connections, events, mobility, travel and institutional workflows.</p><div class="tags"><span class="tag">EdTech</span><span class="tag">SaaS</span><span class="tag">Web + Mobile</span><span class="tag">Enterprise</span></div></div><a class="btn ghost" href="case-intoto.html">View case study ↗</a></div><div class="project-visual"><div class="project-gallery"><div class="gallery-main"><img src="assets/intoto-connect.png" alt="Intoto student connection screen"></div><div class="gallery-side"><figure><img src="assets/intoto-chat.png" alt="Intoto chat screen"></figure><figure><img src="assets/intoto-profile.png" alt="Intoto profile screen"></figure></div><span class="gallery-note">Selected product screens</span><a class="more-count" href="./case-intoto.html" aria-label="View 2 more Intoto screens"><b>+2</b> more</a></div></div></article>
 <article class="project reveal"><div class="project-info"><div><div class="label">02 · BUSINESSBAY</div><h3>BusinessBay</h3><p>Digital business platform combining business profiles, NFC cards, social sharing, appointment scheduling, templates, dashboards and resume creation.</p><div class="tags"><span class="tag">Marketplace</span><span class="tag">Mobile</span><span class="tag">Business Tools</span></div></div><a class="btn ghost" href="case-businessbay.html">View case study ↗</a></div><div class="project-visual v2"><div class="project-gallery"><div class="gallery-main"><img src="assets/business-nfc.png" alt="BusinessBay NFC card experience"></div><div class="gallery-side"><figure><img src="assets/business-dashboard.png" alt="BusinessBay dashboard"></figure><figure><img src="assets/business-appointment.png" alt="BusinessBay appointment experience"></figure></div><span class="gallery-note">Selected product screens</span><a class="more-count" href="./case-businessbay.html" aria-label="View 3 more BusinessBay screens"><b>+3</b> more</a></div></div></article>
-<article class="project reveal"><div class="project-info"><div><div class="label">03 · BEING INDIAN</div><h3>Being Indian</h3><p>Community and local discovery ecosystem for the Indian community in Canada, bringing businesses, associations, events, magazine, blogs and news together.</p><div class="tags"><span class="tag">Marketplace</span><span class="tag">Community</span><span class="tag">Content</span><span class="tag">Events</span></div></div><a class="btn ghost" href="case-being-indian.html">View case study ↗</a></div><div class="project-visual v3"><div class="project-gallery"><div class="gallery-main"><img src="assets/being-events.png" alt="Being Indian events experience"></div><div class="gallery-side"><figure><img src="assets/being-community.png" alt="Being Indian community experience"></figure><figure><img src="assets/being-business.png" alt="Being Indian business experience"></figure></div><span class="gallery-note">Selected product screens</span><a class="more-count" href="./case-being-indian.html" aria-label="View 4 more Being Indian screens"><b>+4</b> more</a></div></div></article>
+<article class="project reveal"><div class="project-info"><div><div class="label">03 · BEING INDIAN</div><h3>Being Indian</h3><p>Community and local discovery ecosystem for the Indian community in Canada, bringing businesses, associations, events, magazine, blogs and news together.</p><div class="tags"><span class="tag">Marketplace</span><span class="tag">Community</span><span class="tag">Content</span><span class="tag">Events</span></div></div><a class="btn ghost" href="case-being-indian.html">View case study ↗</a></div><div class="project-visual v3"><div class="project-gallery"><div class="gallery-main"><img src="assets/being-01-home.png" alt="Being Indian home page"></div><div class="gallery-side"><figure><img src="assets/being-04-search.png" alt="Being Indian restaurant search"></figure><figure><img src="assets/being-11-community.png" alt="Being Indian community associations"></figure></div><span class="gallery-note">01–15 · Product screens</span><a class="more-count" href="#being-gallery" aria-label="View all 15 Being Indian product screens"><b>+12</b> more</a></div></div></article>
 </div></div></section>
 <section><div class="wrap reveal"><div class="head"><div><div class="label">02 / PRODUCT IMPACT</div><h2 class="title">Beyond screens.<br>Into product thinking.</h2></div><p class="copy">I work across product structure, workflows, interface systems and the details that help complex products scale.</p></div><div class="metrics"><div class="metric"><b>6+</b><span>Years experience</span></div><div class="metric"><b>03</b><span>Featured products</span></div><div class="metric"><b>UX → UI</b><span>End-to-end ownership</span></div><div class="metric"><b>8+</b><span>Product domains</span></div></div></div></section>
 <section id="about"><div class="wrap reveal"><div class="head"><div><div class="label">03 / ABOUT</div><h2 class="title">Design with<br>product thinking.</h2></div><p class="copy">I turn complex business requirements into scalable, user-friendly experiences — from information architecture and workflows to high-fidelity UI, systems and handoff.</p></div><div class="about"><div class="about-main"><p>My work sits at the intersection of <strong>business goals, user needs and visual systems.</strong> I enjoy making complicated products easier to understand, navigate and use.</p></div><div class="stats"><div class="stat"><b>Enterprise</b><span>Complex workflows & role-based products</span></div><div class="stat"><b>Mobile</b><span>Consumer and business experiences</span></div><div class="stat"><b>Systems</b><span>Reusable components & design patterns</span></div><div class="stat"><b>Delivery</b><span>Prototype to developer handoff</span></div></div></div></div></section>
@@ -29,4 +53,57 @@
 <section id="skills"><div class="wrap reveal"><div class="head"><div><div class="label">05 / CAPABILITIES</div><h2 class="title">Skills &<br>toolkit.</h2></div><p class="copy">A practical toolkit for solving product problems from structure to final interface.</p></div><div class="skills"><div class="skill"><h3>Product Design</h3><span class="tag">Problem Solving</span><span class="tag">User Research</span><span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">Interaction Design</span><span class="tag">Design Systems</span><span class="tag">Accessibility</span><span class="tag">Responsive Design</span><span class="tag">Usability Testing</span></div><div class="skill"><h3>Domains</h3><span class="tag">SaaS</span><span class="tag">Enterprise</span><span class="tag">FinTech / Trading</span><span class="tag">EdTech</span><span class="tag">CRM</span><span class="tag">Gaming</span><span class="tag">E-commerce</span><span class="tag">Marketplace</span></div><div class="skill"><h3>Tools</h3><span class="tag">Figma</span><span class="tag">Adobe Creative Suite</span><span class="tag">Adobe XD</span><span class="tag">Sketch</span><span class="tag">Canva</span><span class="tag">CorelDraw</span></div><div class="skill"><h3>Education</h3><p>Bachelor of Arts (Economics) — University of Delhi<br><br>UI/UX & Graphic Design — Syntax World</p></div></div></div></section>
 <section id="certifications"><div class="wrap reveal"><div class="head"><div><div class="label">06 / CERTIFICATIONS</div><h2 class="title">Learning that<br>supports my practice.</h2></div><p class="copy">Selected credential included from the material you shared.</p></div><div class="certs"><div class="cert"><div><h3>Project Management Assessment</h3><p>LearnTube.ai · July 31, 2026<br>Credential ID: DJA-B-1-2886286-0</p></div><a class="btn ghost" href="assets/project-management-certificate.pdf" target="_blank">View Certificate ↗</a></div></div></div></section>
 <section><div class="wrap reveal"><div class="contact"><div class="eyebrow" style="color:#142019">07 / CONTACT</div><h2>Have a product problem worth solving?</h2><p>I’m open to product design, UI/UX and enterprise design opportunities.</p><div class="actions"><a class="btn primary" href="mailto:Priyabidaliya@gmail.com">Email me ↗</a><a class="btn ghost" href="assets/resume.pdf" target="_blank">View Resume ↗</a><a class="btn ghost" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div></div></section>
-</main><footer class="wrap"><span>© 2026 Priyanka Baloni</span><span>Senior UI/UX Designer · Product Designer</span></footer><script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));</script></body></html>
+
+<div id="being-gallery" class="being-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Being Indian product screens">
+  <div class="being-modal-inner">
+    <div class="being-modal-top">
+      <div><strong>Being Indian</strong><div class="being-counter" id="being-counter">01 / 15 · Homepage</div></div>
+      <button class="being-close" type="button" aria-label="Close gallery">×</button>
+    </div>
+    <div class="being-view">
+      <button class="being-nav being-prev" type="button" aria-label="Previous screen">‹</button>
+      <img id="being-main-image" src="assets/being-01-home.png" alt="Being Indian Homepage">
+      <button class="being-nav being-next" type="button" aria-label="Next screen">›</button>
+    </div>
+    <div class="being-thumbs"><button class="being-thumb" type="button" data-being-index="0" aria-label="Open screen 1: Homepage"><img src="assets/being-01-home.png" alt=""></button><button class="being-thumb" type="button" data-being-index="1" aria-label="Open screen 2: Login"><img src="assets/being-02-login.png" alt=""></button><button class="being-thumb" type="button" data-being-index="2" aria-label="Open screen 3: Vendor onboarding"><img src="assets/being-03-vendor.png" alt=""></button><button class="being-thumb" type="button" data-being-index="3" aria-label="Open screen 4: Restaurant search"><img src="assets/being-04-search.png" alt=""></button><button class="being-thumb" type="button" data-being-index="4" aria-label="Open screen 5: Menu highlights"><img src="assets/being-05-menu-highlights.png" alt=""></button><button class="being-thumb" type="button" data-being-index="5" aria-label="Open screen 6: Menu listing"><img src="assets/being-06-menu-listing.png" alt=""></button><button class="being-thumb" type="button" data-being-index="6" aria-label="Open screen 7: Gallery"><img src="assets/being-07-gallery.png" alt=""></button><button class="being-thumb" type="button" data-being-index="7" aria-label="Open screen 8: Hours"><img src="assets/being-08-hours.png" alt=""></button><button class="being-thumb" type="button" data-being-index="8" aria-label="Open screen 9: About"><img src="assets/being-09-about.png" alt=""></button><button class="being-thumb" type="button" data-being-index="9" aria-label="Open screen 10: Reviews"><img src="assets/being-10-reviews.png" alt=""></button><button class="being-thumb" type="button" data-being-index="10" aria-label="Open screen 11: Community associations"><img src="assets/being-11-community.png" alt=""></button><button class="being-thumb" type="button" data-being-index="11" aria-label="Open screen 12: Magazine"><img src="assets/being-12-magazine.png" alt=""></button><button class="being-thumb" type="button" data-being-index="12" aria-label="Open screen 13: Events"><img src="assets/being-13-events.png" alt=""></button><button class="being-thumb" type="button" data-being-index="13" aria-label="Open screen 14: Newcomers Hub"><img src="assets/being-14-newcomers.png" alt=""></button><button class="being-thumb" type="button" data-being-index="14" aria-label="Open screen 15: News"><img src="assets/being-15-news.png" alt=""></button></div>
+  </div>
+</div>
+</main><footer class="wrap"><span>© 2026 Priyanka Baloni</span><span>Senior UI/UX Designer · Product Designer</span></footer><script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));</script>
+<script>
+(function(){
+  const modal=document.getElementById('being-gallery');
+  if(!modal) return;
+  const image=document.getElementById('being-main-image');
+  const counter=document.getElementById('being-counter');
+  const thumbs=[...modal.querySelectorAll('.being-thumb')];
+  const close=modal.querySelector('.being-close');
+  const prev=modal.querySelector('.being-prev');
+  const next=modal.querySelector('.being-next');
+  const screens=[
+    ['assets/being-01-home.png','Homepage'],['assets/being-02-login.png','Login'],
+    ['assets/being-03-vendor.png','Vendor onboarding'],['assets/being-04-search.png','Restaurant search'],
+    ['assets/being-05-menu-highlights.png','Menu highlights'],['assets/being-06-menu-listing.png','Menu listing'],
+    ['assets/being-07-gallery.png','Gallery'],['assets/being-08-hours.png','Hours'],
+    ['assets/being-09-about.png','About'],['assets/being-10-reviews.png','Reviews'],
+    ['assets/being-11-community.png','Community associations'],['assets/being-12-magazine.png','Magazine'],
+    ['assets/being-13-events.png','Events'],['assets/being-14-newcomers.png','Newcomers Hub'],
+    ['assets/being-15-news.png','News']
+  ];
+  let index=0;
+  function render(){
+    const s=screens[index];
+    image.src=s[0]; image.alt='Being Indian '+s[1];
+    counter.textContent=String(index+1).padStart(2,'0')+' / '+screens.length+' · '+s[1];
+    thumbs.forEach((t,i)=>t.classList.toggle('active',i===index));
+  }
+  function open(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; render(); }
+  function shut(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  function move(dir){ index=(index+dir+screens.length)%screens.length; render(); }
+  document.querySelectorAll('a[href="#being-gallery"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();open();}));
+  close.addEventListener('click',shut); prev.addEventListener('click',()=>move(-1)); next.addEventListener('click',()=>move(1));
+  thumbs.forEach((t,i)=>t.addEventListener('click',()=>{index=i;render();}));
+  modal.addEventListener('click',e=>{if(e.target===modal)shut();});
+  document.addEventListener('keydown',e=>{if(!modal.classList.contains('open'))return;if(e.key==='Escape')shut();if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1);});
+})();
+</script>
+</body></html>
