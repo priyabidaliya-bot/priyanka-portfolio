@@ -722,84 +722,95 @@ h1,h2,h3,h4,h5,h6,
 </style>
 
 
-<style id="v38-hero-name-color-motion">
-/* V38 — animated color + motion for BOTH parts of the hero name */
-.hero h1{
-  perspective:900px;
-}
+<style id="v39-clean-hero-name-motion">
+/* V39 — clean, non-overlapping two-part hero name animation */
 
-/* "Hi, I'm" — white/lime animated color */
-.hero h1{
-  background:linear-gradient(
-    110deg,
-    #ffffff 0%,
-    #ffffff 28%,
-    #d8ff62 42%,
-    #ffffff 56%,
-    #ffffff 100%
-  );
-  background-size:240% 100%;
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent!important;
-  animation:
-    heroNameColorV38 5s ease-in-out infinite,
-    heroNameFloatV38 4.5s ease-in-out infinite!important;
-}
-
-/* "Priyanka Baloni." — stronger lime highlight motion */
+/* Reset any inherited span styling */
+.hero h1 .hero-intro,
 .hero h1 .hero-name{
-  display:inline-block;
+  display:inline;
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  -webkit-text-stroke:0!important;
+  text-stroke:0!important;
+  background:none!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+}
+
+/* Keep the two text parts together naturally; no duplicate/stacked line */
+.hero h1{
+  overflow:visible!important;
+}
+
+/* "Hi, I'm" gets a subtle white → lime → white sweep */
+.hero h1 .hero-intro{
   background:linear-gradient(
-    105deg,
+    100deg,
     #ffffff 0%,
-    #ffffff 18%,
-    #d8ff62 38%,
+    #ffffff 30%,
+    #d8ff62 47%,
+    #ffffff 64%,
+    #ffffff 100%
+  )!important;
+  background-size:240% 100%!important;
+  background-clip:text!important;
+  -webkit-background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  animation:introColorSweepV39 4.8s ease-in-out infinite;
+}
+
+/* Name gets its own independent highlight */
+.hero h1 .hero-name{
+  background:linear-gradient(
+    100deg,
+    #ffffff 0%,
+    #ffffff 22%,
+    #d8ff62 42%,
     #d8ff62 58%,
     #ffffff 78%,
     #ffffff 100%
-  );
-  background-size:260% 100%;
-  -webkit-background-clip:text;
-  background-clip:text;
+  )!important;
+  background-size:250% 100%!important;
+  background-clip:text!important;
+  -webkit-background-clip:text!important;
   -webkit-text-fill-color:transparent!important;
-  animation:
-    heroNameHighlightV38 4.2s ease-in-out infinite,
-    heroNameFloatNameV38 3.8s ease-in-out infinite!important;
-  will-change:background-position,transform;
+  animation:nameColorSweepV39 4.2s ease-in-out infinite,
+            nameFloatV39 3.8s ease-in-out infinite;
 }
 
-@keyframes heroNameColorV38{
+@keyframes introColorSweepV39{
   0%,100%{background-position:100% 50%}
   50%{background-position:0% 50%}
 }
 
-@keyframes heroNameHighlightV38{
+@keyframes nameColorSweepV39{
   0%,100%{background-position:100% 50%}
   50%{background-position:0% 50%}
 }
 
-@keyframes heroNameFloatV38{
-  0%,100%{transform:translate3d(0,0,0)}
-  50%{transform:translate3d(0,-3px,0)}
+@keyframes nameFloatV39{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-3px)}
 }
 
-@keyframes heroNameFloatNameV38{
-  0%,100%{transform:translate3d(0,0,0) scale(1)}
-  50%{transform:translate3d(0,-5px,0) scale(1.008)}
-}
-
-/* Keep the requested role color */
-.hero .role,
-.hero .eyebrow,
-.hero .hero-role,
-.hero [class*="role"]{
+/* Role remains exact requested lime */
+.hero .eyebrow{
   color:#d8ff62!important;
   -webkit-text-fill-color:#d8ff62!important;
 }
 
+/* On smaller screens allow the browser to wrap naturally */
+@media(max-width:700px){
+  .hero h1 .hero-intro,
+  .hero h1 .hero-name{
+    display:inline;
+  }
+}
+
 @media(prefers-reduced-motion:reduce){
-  .hero h1,
+  .hero h1 .hero-intro,
   .hero h1 .hero-name{
     animation:none!important;
     background:none!important;
@@ -809,7 +820,7 @@ h1,h2,h3,h4,h5,h6,
 </style>
 
 </head><body><div id="scroll-progress" aria-hidden="true"></div><nav class="nav"><div class="wrap navin"><a class="brand" href="index.html"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><span>PRIYANKA BALONI</span></a><div class="links"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#skills">Skills</a><a href="index.html#certifications">Certifications</a></div><div class="navcta"><a class="pill" href="assets/resume.pdf" target="_blank">Resume ↗</a><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a></div></div></nav><main>
-<section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1>Hi, I'm <span class="hero-name">Priyanka Baloni.</span></h1><div class="eyebrow">SENIOR UI/UX DESIGNER · PRODUCT DESIGNER</div><p class="lead">6+ years designing scalable web and mobile experiences across SaaS, Enterprise, FinTech, EdTech, CRM, E-commerce, Logistics and Healthcare — from discovery and UX architecture to high-fidelity UI and developer handoff.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn ghost" href="mailto:Priyabidaliya@gmail.com">Let’s work together ↗</a></div><div class="actions"><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a><a class="pill" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div><div class="photo reveal"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><div class="badge one"><b>6+</b>years experience</div><div class="badge two"><b>End-to-end</b>product design</div></div></div></section>
+<section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1><span class="hero-intro">Hi, I'm</span> <span class="hero-name">Priyanka Baloni.</span></h1><div class="eyebrow">SENIOR UI/UX DESIGNER · PRODUCT DESIGNER</div><p class="lead">6+ years designing scalable web and mobile experiences across SaaS, Enterprise, FinTech, EdTech, CRM, E-commerce, Logistics and Healthcare — from discovery and UX architecture to high-fidelity UI and developer handoff.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn ghost" href="mailto:Priyabidaliya@gmail.com">Let’s work together ↗</a></div><div class="actions"><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a><a class="pill" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div><div class="photo reveal"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><div class="badge one"><b>6+</b>years experience</div><div class="badge two"><b>End-to-end</b>product design</div></div></div></section>
 <div class="marquee" aria-label="Design capabilities">
   <div class="marquee-track">
     <div class="marquee-group">
