@@ -20,6 +20,27 @@
 
 @media(max-width:900px){.process-reference .process-intro{grid-template-columns:1fr;gap:18px}.process-ref-visual{overflow-x:auto;padding-bottom:22px}.process-ref-visual svg{min-width:1180px;width:1180px}}
 @media(max-width:560px){.process-reference{padding:80px 0 90px}.process-reference .process-intro{margin-bottom:30px}.process-ref-visual svg{min-width:1180px;width:1180px}}
+
+/* Testimonials — horizontal scrolling, no form */
+.testimonials-section{padding:82px 0;overflow:hidden}
+.testimonials-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
+.testimonials-track-wrap{overflow:hidden;width:100%;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent)}
+.testimonials-track{display:flex;width:max-content;gap:16px;animation:testimonialScroll 32s linear infinite;will-change:transform}
+.testimonials-track:hover{animation-play-state:paused}
+.testimonial-card{width:360px;min-height:190px;flex:0 0 360px;border:1px solid var(--line);border-radius:22px;padding:25px;background:linear-gradient(145deg,#11161d,#0d1116);display:flex;flex-direction:column;justify-content:space-between;transition:transform .3s ease,border-color .3s ease}
+.testimonial-card:hover{transform:translateY(-5px);border-color:rgba(216,255,98,.35)}
+.testimonial-quote{font-size:15px;line-height:1.7;color:#dfe5ea;margin:0}
+.testimonial-person{display:flex;align-items:center;gap:11px;margin-top:22px}
+.testimonial-avatar{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(216,255,98,.10);border:1px solid rgba(216,255,98,.25);color:var(--lime);font-size:10px;font-weight:900}
+.testimonial-name{font-size:11px;font-weight:900;color:#f2f5f7}
+.testimonial-role{font-size:9px;color:#778493;margin-top:3px}
+@keyframes testimonialScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:560px){
+  .testimonials-head{display:block}
+  .testimonials-head .copy{margin-top:14px}
+  .testimonial-card{width:300px;min-height:185px;flex-basis:300px;padding:21px}
+}
+
 </style><style>
 .more-count{cursor:pointer;text-decoration:none;transition:transform .2s ease,background .2s ease,border-color .2s ease}
 .more-count:hover{transform:translateY(-2px);background:rgba(20,26,32,.96);border-color:rgba(210,255,74,.45)}
@@ -359,12 +380,64 @@
     </div>
   </div>
 </section>
-<section><div class="wrap reveal"><div class="head"><div><div class="label">03 / PRODUCT IMPACT</div><h2 class="title">Beyond screens.<br>Into product thinking.</h2></div><p class="copy">I work across product structure, workflows, interface systems and the details that help complex products scale.</p></div><div class="metrics"><div class="metric"><b>6+</b><span>Years experience</span></div><div class="metric"><b>03</b><span>Featured products</span></div><div class="metric"><b>UX → UI</b><span>End-to-end ownership</span></div><div class="metric"><b>8+</b><span>Product domains</span></div></div></div></section>
-<section id="about"><div class="wrap reveal"><div class="head"><div><div class="label">04 / ABOUT</div><h2 class="title">Design with<br>product thinking.</h2></div><p class="copy">I turn complex business requirements into scalable, user-friendly experiences — from information architecture and workflows to high-fidelity UI, systems and handoff.</p></div><div class="about"><div class="about-main"><p>My work sits at the intersection of <strong>business goals, user needs and visual systems.</strong> I enjoy making complicated products easier to understand, navigate and use.</p></div><div class="stats"><div class="stat"><b>Enterprise</b><span>Complex workflows & role-based products</span></div><div class="stat"><b>Mobile</b><span>Consumer and business experiences</span></div><div class="stat"><b>Systems</b><span>Reusable components & design patterns</span></div><div class="stat"><b>Delivery</b><span>Prototype to developer handoff</span></div></div></div></div></section>
-<section id="experience"><div class="wrap reveal"><div class="head"><div><div class="label">05 / EXPERIENCE</div><h2 class="title">Career<br>timeline.</h2></div><p class="copy">Product design across enterprise and consumer products.</p></div><div class="timeline"><div class="job"><div class="jobtop"><div><h3>Senior UI/UX Designer</h3><div class="company">Metaversity Technologies Pvt. Ltd.</div></div><div class="date">Sep 2022 — Present</div></div><p>End-to-end product design across EdTech, SaaS, FinTech, CRM, Enterprise Applications, E-commerce and Gaming.</p><ul><li>Led UX for enterprise modules, user journeys, information architecture, wireframes and prototypes.</li><li>Built scalable design systems and reusable components.</li><li>Designed responsive dashboards for university, student, agent and admin roles.</li><li>Simplified complex admission and visa workflows.</li></ul></div><div class="job"><div class="jobtop"><div><h3>UI/UX Designer</h3><div class="company">Techbeliever Technologies (Khiladi Adda)</div></div><div class="date">Dec 2021 — Aug 2022</div></div><p>Designed fantasy gaming and micro eSports experiences across web and mobile, including wallets, tournaments, contests, profiles and leaderboards.</p></div><div class="job"><div class="jobtop"><div><h3>UI/Graphic Designer</h3><div class="company">Appsmediaz Technologies</div></div><div class="date">Jul 2020 — Nov 2021</div></div><p>Designed responsive websites and mobile applications for business and healthcare-focused products, alongside branding assets and client work.</p></div></div></div></section>
-<section id="skills"><div class="wrap reveal"><div class="head"><div><div class="label">06 / CAPABILITIES</div><h2 class="title">Skills &<br>toolkit.</h2></div><p class="copy">A practical toolkit for solving product problems from structure to final interface.</p></div><div class="skills"><div class="skill"><h3>Product Design</h3><span class="tag">Problem Solving</span><span class="tag">User Research</span><span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">Interaction Design</span><span class="tag">Design Systems</span><span class="tag">Accessibility</span><span class="tag">Responsive Design</span><span class="tag">Usability Testing</span></div><div class="skill"><h3>Domains</h3><span class="tag">SaaS</span><span class="tag">Enterprise</span><span class="tag">FinTech / Trading</span><span class="tag">EdTech</span><span class="tag">CRM</span><span class="tag">Gaming</span><span class="tag">E-commerce</span><span class="tag">Marketplace</span></div><div class="skill"><h3>Tools</h3><span class="tag">Figma</span><span class="tag">Adobe Creative Suite</span><span class="tag">Adobe XD</span><span class="tag">Sketch</span><span class="tag">Canva</span><span class="tag">CorelDraw</span></div><div class="skill"><h3>Education</h3><p>Bachelor of Arts (Economics) — University of Delhi<br><br>UI/UX & Graphic Design — Syntax World</p></div></div></div></section>
-<section id="certifications"><div class="wrap reveal"><div class="head"><div><div class="label">07 / CERTIFICATIONS</div><h2 class="title">Learning that<br>supports my practice.</h2></div><p class="copy">Selected credential included from the material you shared.</p></div><div class="certs"><div class="cert"><div><h3>Project Management Assessment</h3><p>LearnTube.ai · July 31, 2026<br>Credential ID: DJA-B-1-2886286-0</p></div><a class="btn ghost" href="assets/project-management-certificate.pdf" target="_blank">View Certificate ↗</a></div></div></div></section>
-<section><div class="wrap reveal"><div class="contact"><div class="eyebrow" style="color:#142019">08 / CONTACT</div><h2>Have a product problem worth solving?</h2><p>I’m open to product design, UI/UX and enterprise design opportunities.</p><div class="actions"><a class="btn primary" href="mailto:Priyabidaliya@gmail.com">Email me ↗</a><a class="btn ghost" href="assets/resume.pdf" target="_blank">View Resume ↗</a><a class="btn ghost" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div></div></section>
+
+<section class="testimonials-section" id="testimonials">
+  <div class="wrap">
+    <div class="testimonials-head reveal">
+      <div>
+        <div class="label">03 / TESTIMONIALS</div>
+        <h2 class="title">What people<br>say.</h2>
+      </div>
+      <p class="copy">A few words from people I’ve worked with across product, design and engineering.</p>
+    </div>
+
+    <div class="testimonials-track-wrap">
+      <div class="testimonials-track">
+        <article class="testimonial-card">
+          <p class="testimonial-quote">“Priyanka brings clarity to complex product requirements and turns them into thoughtful, easy-to-use experiences.”</p>
+          <div class="testimonial-person"><div class="testimonial-avatar">PM</div><div><div class="testimonial-name">Product Manager</div><div class="testimonial-role">Product Collaboration</div></div></div>
+        </article>
+        <article class="testimonial-card">
+          <p class="testimonial-quote">“Strong attention to detail, clean UI thinking and a very structured approach to solving UX problems.”</p>
+          <div class="testimonial-person"><div class="testimonial-avatar">EL</div><div><div class="testimonial-name">Engineering Lead</div><div class="testimonial-role">Development Collaboration</div></div></div>
+        </article>
+        <article class="testimonial-card">
+          <p class="testimonial-quote">“She understands both user needs and business goals, which makes the final product feel purposeful rather than just polished.”</p>
+          <div class="testimonial-person"><div class="testimonial-avatar">DC</div><div><div class="testimonial-name">Design Collaborator</div><div class="testimonial-role">Design Collaboration</div></div></div>
+        </article>
+        <article class="testimonial-card">
+          <p class="testimonial-quote">“Great at simplifying complicated workflows and creating scalable components that are practical for development.”</p>
+          <div class="testimonial-person"><div class="testimonial-avatar">TL</div><div><div class="testimonial-name">Team Lead</div><div class="testimonial-role">Product Team</div></div></div>
+        </article>
+
+        <!-- Duplicate set for a seamless loop -->
+        <article class="testimonial-card" aria-hidden="true">
+          <p class="testimonial-quote">“Priyanka brings clarity to complex product requirements and turns them into thoughtful, easy-to-use experiences.”</p>
+          <div class="testimonial-person"><div class="testimonial-avatar">PM</div><div><div class="testimonial-name">Product Manager</div><div class="testimonial-role">Product Collaboration</div></div></div>
+        </article>
+        <article class="testimonial-card" aria-hidden="true">
+          <p class="testimonial-quote">“Strong attention to detail, clean UI thinking and a very structured approach to solving UX problems.”</p>
+          <div class="testimonial-person"><div class="testimonial-avatar">EL</div><div><div class="testimonial-name">Engineering Lead</div><div class="testimonial-role">Development Collaboration</div></div></div>
+        </article>
+        <article class="testimonial-card" aria-hidden="true">
+          <p class="testimonial-quote">“She understands both user needs and business goals, which makes the final product feel purposeful rather than just polished.”</p>
+          <div class="testimonial-person"><div class="testimonial-avatar">DC</div><div><div class="testimonial-name">Design Collaborator</div><div class="testimonial-role">Design Collaboration</div></div></div>
+        </article>
+        <article class="testimonial-card" aria-hidden="true">
+          <p class="testimonial-quote">“Great at simplifying complicated workflows and creating scalable components that are practical for development.”</p>
+          <div class="testimonial-person"><div class="testimonial-avatar">TL</div><div><div class="testimonial-name">Team Lead</div><div class="testimonial-role">Product Team</div></div></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section><div class="wrap reveal"><div class="head"><div><div class="label">04 / PRODUCT IMPACT</div><h2 class="title">Beyond screens.<br>Into product thinking.</h2></div><p class="copy">I work across product structure, workflows, interface systems and the details that help complex products scale.</p></div><div class="metrics"><div class="metric"><b>6+</b><span>Years experience</span></div><div class="metric"><b>03</b><span>Featured products</span></div><div class="metric"><b>UX → UI</b><span>End-to-end ownership</span></div><div class="metric"><b>8+</b><span>Product domains</span></div></div></div></section>
+<section id="about"><div class="wrap reveal"><div class="head"><div><div class="label">05 / ABOUT</div><h2 class="title">Design with<br>product thinking.</h2></div><p class="copy">I turn complex business requirements into scalable, user-friendly experiences — from information architecture and workflows to high-fidelity UI, systems and handoff.</p></div><div class="about"><div class="about-main"><p>My work sits at the intersection of <strong>business goals, user needs and visual systems.</strong> I enjoy making complicated products easier to understand, navigate and use.</p></div><div class="stats"><div class="stat"><b>Enterprise</b><span>Complex workflows & role-based products</span></div><div class="stat"><b>Mobile</b><span>Consumer and business experiences</span></div><div class="stat"><b>Systems</b><span>Reusable components & design patterns</span></div><div class="stat"><b>Delivery</b><span>Prototype to developer handoff</span></div></div></div></div></section>
+<section id="experience"><div class="wrap reveal"><div class="head"><div><div class="label">06 / EXPERIENCE</div><h2 class="title">Career<br>timeline.</h2></div><p class="copy">Product design across enterprise and consumer products.</p></div><div class="timeline"><div class="job"><div class="jobtop"><div><h3>Senior UI/UX Designer</h3><div class="company">Metaversity Technologies Pvt. Ltd.</div></div><div class="date">Sep 2022 — Present</div></div><p>End-to-end product design across EdTech, SaaS, FinTech, CRM, Enterprise Applications, E-commerce and Gaming.</p><ul><li>Led UX for enterprise modules, user journeys, information architecture, wireframes and prototypes.</li><li>Built scalable design systems and reusable components.</li><li>Designed responsive dashboards for university, student, agent and admin roles.</li><li>Simplified complex admission and visa workflows.</li></ul></div><div class="job"><div class="jobtop"><div><h3>UI/UX Designer</h3><div class="company">Techbeliever Technologies (Khiladi Adda)</div></div><div class="date">Dec 2021 — Aug 2022</div></div><p>Designed fantasy gaming and micro eSports experiences across web and mobile, including wallets, tournaments, contests, profiles and leaderboards.</p></div><div class="job"><div class="jobtop"><div><h3>UI/Graphic Designer</h3><div class="company">Appsmediaz Technologies</div></div><div class="date">Jul 2020 — Nov 2021</div></div><p>Designed responsive websites and mobile applications for business and healthcare-focused products, alongside branding assets and client work.</p></div></div></div></section>
+<section id="skills"><div class="wrap reveal"><div class="head"><div><div class="label">07 / CAPABILITIES</div><h2 class="title">Skills &<br>toolkit.</h2></div><p class="copy">A practical toolkit for solving product problems from structure to final interface.</p></div><div class="skills"><div class="skill"><h3>Product Design</h3><span class="tag">Problem Solving</span><span class="tag">User Research</span><span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">Interaction Design</span><span class="tag">Design Systems</span><span class="tag">Accessibility</span><span class="tag">Responsive Design</span><span class="tag">Usability Testing</span></div><div class="skill"><h3>Domains</h3><span class="tag">SaaS</span><span class="tag">Enterprise</span><span class="tag">FinTech / Trading</span><span class="tag">EdTech</span><span class="tag">CRM</span><span class="tag">Gaming</span><span class="tag">E-commerce</span><span class="tag">Marketplace</span></div><div class="skill"><h3>Tools</h3><span class="tag">Figma</span><span class="tag">Adobe Creative Suite</span><span class="tag">Adobe XD</span><span class="tag">Sketch</span><span class="tag">Canva</span><span class="tag">CorelDraw</span></div><div class="skill"><h3>Education</h3><p>Bachelor of Arts (Economics) — University of Delhi<br><br>UI/UX & Graphic Design — Syntax World</p></div></div></div></section>
+<section id="certifications"><div class="wrap reveal"><div class="head"><div><div class="label">08 / CERTIFICATIONS</div><h2 class="title">Learning that<br>supports my practice.</h2></div><p class="copy">Selected credential included from the material you shared.</p></div><div class="certs"><div class="cert"><div><h3>Project Management Assessment</h3><p>LearnTube.ai · July 31, 2026<br>Credential ID: DJA-B-1-2886286-0</p></div><a class="btn ghost" href="assets/project-management-certificate.pdf" target="_blank">View Certificate ↗</a></div></div></div></section>
+<section><div class="wrap reveal"><div class="contact"><div class="eyebrow" style="color:#142019">09 / CONTACT</div><h2>Have a product problem worth solving?</h2><p>I’m open to product design, UI/UX and enterprise design opportunities.</p><div class="actions"><a class="btn primary" href="mailto:Priyabidaliya@gmail.com">Email me ↗</a><a class="btn ghost" href="assets/resume.pdf" target="_blank">View Resume ↗</a><a class="btn ghost" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div></div></section>
 
 <div id="being-gallery" class="being-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Being Indian product screens">
   <div class="being-modal-inner">
