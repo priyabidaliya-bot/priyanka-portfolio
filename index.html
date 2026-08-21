@@ -308,7 +308,7 @@ body{overflow-x:hidden}
 /* V33 — stronger readable typography + larger skill tabs + white hover */
 :root{
   --text-main:#f2f5f7;
-  --text-body:#b8c3cd;
+  --text-body:#EFEFEF;
   --text-muted:#8f9aa6;
   --text-soft:#aab5c0;
 }
@@ -404,7 +404,7 @@ h1,h2,h3,h4,h5,h6,
 
 /* Keep supporting text brighter, but clearly below headings */
 body,p,.copy,.description,.meta,.sub,.role,.date,.small,.eyebrow,.caption{
-  color:#b8c3cd;
+  color:#EFEFEF;
 }
 
 /* Keep section labels / accents lime */
@@ -468,7 +468,74 @@ h1,h2,h3,h4,h5,h6,
 
 /* Body/supporting text remains readable but secondary */
 body,p,.copy,.description,.meta,.sub,.role,.date,.small,.eyebrow,.caption{
-  color:#b8c3cd;
+  color:#EFEFEF;
+}
+</style>
+
+
+<style id="v36-final-corrections">
+/* V36 — exact requested colors and restored hero motion */
+:root{
+  --text-body:#EFEFEF;
+  --text-main:#FFFFFF;
+}
+
+/* Supporting text: requested #EFEFEF */
+body,p,.copy,.description,.meta,.sub,.role,.date,.small,.eyebrow,.caption,
+.project .meta,.project .desc,.timeline .meta,.job .meta,.footer,.footer a{
+  color:#EFEFEF!important;
+}
+
+/* Main headings stay pure white */
+h1,h2,h3,h4,h5,h6,
+.title,.hero h1,.section-title,.head h1,.head h2,.head h3,
+.project h1,.project h2,.project h3,.project h4,
+.other-card h1,.other-card h2,.other-card h3,
+.skill h1,.skill h2,.skill h3,.skill h4,
+.skill-card h1,.skill-card h2,.skill-card h3,.skill-card h4,
+.skills h1,.skills h2,.skills h3,
+.tools h1,.tools h2,.tools h3,
+.domains h1,.domains h2,.domains h3,
+.education h1,.education h2,.education h3,
+.metric h1,.metric h2,.metric h3,.metric b,
+.job h1,.job h2,.job h3,.job h4,
+.contact h1,.contact h2,.contact h3,
+.testimonial-card h1,.testimonial-card h2,.testimonial-card h3{
+  color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;
+  opacity:1!important;
+}
+
+/* Hero role title — exact lime requested */
+.hero .role,
+.hero .eyebrow,
+.hero .hero-role,
+.hero [class*="role"]{
+  color:#d8ff62!important;
+  -webkit-text-fill-color:#d8ff62!important;
+}
+
+/* Restore the original smooth hero entrance */
+.hero .reveal{
+  animation:heroContentInV36 .9s cubic-bezier(.2,.75,.25,1) both!important;
+}
+.hero .photo.reveal{
+  animation:heroPhotoInV36 1s .12s cubic-bezier(.2,.75,.25,1) both!important;
+}
+.hero h1{
+  animation:heroTitleInV36 1s .08s cubic-bezier(.2,.75,.25,1) both!important;
+}
+@keyframes heroContentInV36{
+  from{opacity:0;transform:translateY(28px);filter:blur(5px)}
+  to{opacity:1;transform:none;filter:none}
+}
+@keyframes heroPhotoInV36{
+  from{opacity:0;transform:translate3d(24px,24px,0) scale(.97);filter:blur(4px)}
+  to{opacity:1;transform:none;filter:none}
+}
+@keyframes heroTitleInV36{
+  from{opacity:0;letter-spacing:-.035em;transform:translateY(18px)}
+  to{opacity:1;letter-spacing:-.075em;transform:none}
 }
 </style>
 
