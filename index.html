@@ -819,6 +819,78 @@ h1,h2,h3,h4,h5,h6,
 }
 </style>
 
+
+<style id="v40-final-hero-name-fix">
+/* V40 — stable text rendering: NO gradient clipping, smooth color + motion */
+.hero h1 .hero-intro,
+.hero h1 .hero-name{
+  display:inline!important;
+  position:relative!important;
+  background:none!important;
+  background-image:none!important;
+  background-size:auto!important;
+  background-clip:border-box!important;
+  -webkit-background-clip:border-box!important;
+  color:#ffffff!important;
+  -webkit-text-fill-color:#ffffff!important;
+  -webkit-text-stroke:0!important;
+  text-shadow:none!important;
+  opacity:1!important;
+}
+
+/* Both parts animate independently.
+   Color animation uses normal color (not background-clip), so letters cannot look cut/chopped. */
+.hero h1 .hero-intro{
+  animation:
+    heroIntroColorV40 4.6s ease-in-out infinite,
+    heroIntroMotionV40 3.8s ease-in-out infinite!important;
+}
+
+.hero h1 .hero-name{
+  animation:
+    heroNameColorV40 4.2s ease-in-out infinite,
+    heroNameMotionV40 3.5s ease-in-out .25s infinite!important;
+}
+
+@keyframes heroIntroColorV40{
+  0%,100%{color:#ffffff}
+  45%{color:#d8ff62}
+  70%{color:#ffffff}
+}
+
+@keyframes heroNameColorV40{
+  0%,100%{color:#ffffff}
+  45%{color:#d8ff62}
+  70%{color:#ffffff}
+}
+
+@keyframes heroIntroMotionV40{
+  0%,100%{top:0}
+  50%{top:-3px}
+}
+
+@keyframes heroNameMotionV40{
+  0%,100%{top:0}
+  50%{top:-5px}
+}
+
+/* Keep the requested role color */
+.hero .eyebrow{
+  color:#d8ff62!important;
+  -webkit-text-fill-color:#d8ff62!important;
+}
+
+/* Do not disable the name motion unless the user/browser explicitly requests reduced motion */
+@media(prefers-reduced-motion:reduce){
+  .hero h1 .hero-intro,
+  .hero h1 .hero-name{
+    animation:none!important;
+    color:#ffffff!important;
+    -webkit-text-fill-color:#ffffff!important;
+  }
+}
+</style>
+
 </head><body><div id="scroll-progress" aria-hidden="true"></div><nav class="nav"><div class="wrap navin"><a class="brand" href="index.html"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><span>PRIYANKA BALONI</span></a><div class="links"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#skills">Skills</a><a href="index.html#certifications">Certifications</a></div><div class="navcta"><a class="pill" href="assets/resume.pdf" target="_blank">Resume ↗</a><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a></div></div></nav><main>
 <section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1><span class="hero-intro">Hi, I'm</span> <span class="hero-name">Priyanka Baloni.</span></h1><div class="eyebrow">SENIOR UI/UX DESIGNER · PRODUCT DESIGNER</div><p class="lead">6+ years designing scalable web and mobile experiences across SaaS, Enterprise, FinTech, EdTech, CRM, E-commerce, Logistics and Healthcare — from discovery and UX architecture to high-fidelity UI and developer handoff.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn ghost" href="mailto:Priyabidaliya@gmail.com">Let’s work together ↗</a></div><div class="actions"><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a><a class="pill" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div><div class="photo reveal"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><div class="badge one"><b>6+</b>years experience</div><div class="badge two"><b>End-to-end</b>product design</div></div></div></section>
 <div class="marquee" aria-label="Design capabilities">
