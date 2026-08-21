@@ -721,178 +721,95 @@ h1,h2,h3,h4,h5,h6,
 }
 </style>
 
+<style id="v42-clean-hero-color-motion">
+/* V42 — single authoritative hero name animation */
 
-<style id="v39-clean-hero-name-motion">
-/* V39 — clean, non-overlapping two-part hero name animation */
-
-/* Reset any inherited span styling */
-.hero h1 .hero-intro,
-.hero h1 .hero-name{
-  display:inline;
-  color:#ffffff!important;
-  -webkit-text-fill-color:#ffffff!important;
-  -webkit-text-stroke:0!important;
-  text-stroke:0!important;
-  background:none!important;
-  border:0!important;
-  outline:0!important;
-  box-shadow:none!important;
-}
-
-/* Keep the two text parts together naturally; no duplicate/stacked line */
+/* Stable typography: no gradient text clipping */
 .hero h1{
   overflow:visible!important;
 }
 
-/* "Hi, I'm" gets a subtle white → lime → white sweep */
-.hero h1 .hero-intro{
-  background:linear-gradient(
-    100deg,
-    #ffffff 0%,
-    #ffffff 30%,
-    #d8ff62 47%,
-    #ffffff 64%,
-    #ffffff 100%
-  )!important;
-  background-size:240% 100%!important;
-  background-clip:text!important;
-  -webkit-background-clip:text!important;
-  -webkit-text-fill-color:transparent!important;
-  animation:introColorSweepV39 4.8s ease-in-out infinite;
-}
-
-/* Name gets its own independent highlight */
-.hero h1 .hero-name{
-  background:linear-gradient(
-    100deg,
-    #ffffff 0%,
-    #ffffff 22%,
-    #d8ff62 42%,
-    #d8ff62 58%,
-    #ffffff 78%,
-    #ffffff 100%
-  )!important;
-  background-size:250% 100%!important;
-  background-clip:text!important;
-  -webkit-background-clip:text!important;
-  -webkit-text-fill-color:transparent!important;
-  animation:nameColorSweepV39 4.2s ease-in-out infinite,
-            nameFloatV39 3.8s ease-in-out infinite;
-}
-
-@keyframes introColorSweepV39{
-  0%,100%{background-position:100% 50%}
-  50%{background-position:0% 50%}
-}
-
-@keyframes nameColorSweepV39{
-  0%,100%{background-position:100% 50%}
-  50%{background-position:0% 50%}
-}
-
-@keyframes nameFloatV39{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-3px)}
-}
-
-/* Role remains exact requested lime */
-.hero .eyebrow{
-  color:#d8ff62!important;
-  -webkit-text-fill-color:#d8ff62!important;
-}
-
-/* On smaller screens allow the browser to wrap naturally */
-@media(max-width:700px){
-  .hero h1 .hero-intro,
-  .hero h1 .hero-name{
-    display:inline;
-  }
-}
-
-@media(prefers-reduced-motion:reduce){
-  .hero h1 .hero-intro,
-  .hero h1 .hero-name{
-    animation:none!important;
-    background:none!important;
-    -webkit-text-fill-color:#ffffff!important;
-  }
-}
-</style>
-
-
-<style id="v40-final-hero-name-fix">
-/* V40 — stable text rendering: NO gradient clipping, smooth color + motion */
 .hero h1 .hero-intro,
 .hero h1 .hero-name{
   display:inline!important;
-  position:relative!important;
+  white-space:normal!important;
   background:none!important;
   background-image:none!important;
-  background-size:auto!important;
-  background-clip:border-box!important;
   -webkit-background-clip:border-box!important;
+  background-clip:border-box!important;
+  -webkit-text-fill-color:inherit!important;
+}
+
+/* Each letter travels through white → lime → white.
+   The stagger creates a visible left-to-right colour wave. */
+.hero h1 .hero-letter{
+  display:inline-block!important;
   color:#ffffff!important;
   -webkit-text-fill-color:#ffffff!important;
-  -webkit-text-stroke:0!important;
-  text-shadow:none!important;
-  opacity:1!important;
-}
-
-/* Both parts animate independently.
-   Color animation uses normal color (not background-clip), so letters cannot look cut/chopped. */
-.hero h1 .hero-intro{
   animation:
-    heroIntroColorV40 4.6s ease-in-out infinite,
-    heroIntroMotionV40 3.8s ease-in-out infinite!important;
+    heroColorWaveV42 3.2s ease-in-out infinite,
+    heroLetterLiftV42 3.2s ease-in-out infinite;
+  animation-delay:
+    calc(var(--i) * 0.085s),
+    calc(var(--i) * 0.085s);
+  will-change:color,transform;
 }
 
-.hero h1 .hero-name{
-  animation:
-    heroNameColorV40 4.2s ease-in-out infinite,
-    heroNameMotionV40 3.5s ease-in-out .25s infinite!important;
+/* Start the name slightly after "Hi, I'm" */
+.hero h1 .hero-name .hero-letter{
+  animation-delay:
+    calc(0.55s + var(--i) * 0.085s),
+    calc(0.55s + var(--i) * 0.085s);
 }
 
-@keyframes heroIntroColorV40{
-  0%,100%{color:#ffffff}
-  45%{color:#d8ff62}
-  70%{color:#ffffff}
+.hero h1 .hero-space{
+  display:inline-block!important;
+  width:.28em;
 }
 
-@keyframes heroNameColorV40{
-  0%,100%{color:#ffffff}
-  45%{color:#d8ff62}
-  70%{color:#ffffff}
+@keyframes heroColorWaveV42{
+  0%,100%{
+    color:#ffffff;
+    -webkit-text-fill-color:#ffffff;
+  }
+  24%{
+    color:#d8ff62;
+    -webkit-text-fill-color:#d8ff62;
+  }
+  46%{
+    color:#d8ff62;
+    -webkit-text-fill-color:#d8ff62;
+  }
+  66%{
+    color:#ffffff;
+    -webkit-text-fill-color:#ffffff;
+  }
 }
 
-@keyframes heroIntroMotionV40{
-  0%,100%{top:0}
-  50%{top:-3px}
+@keyframes heroLetterLiftV42{
+  0%,100%{transform:translate3d(0,0,0)}
+  30%{transform:translate3d(0,-4px,0)}
+  50%{transform:translate3d(0,0,0)}
 }
 
-@keyframes heroNameMotionV40{
-  0%,100%{top:0}
-  50%{top:-5px}
-}
-
-/* Keep the requested role color */
+/* Exact requested role colour */
 .hero .eyebrow{
   color:#d8ff62!important;
   -webkit-text-fill-color:#d8ff62!important;
 }
 
-/* Do not disable the name motion unless the user/browser explicitly requests reduced motion */
 @media(prefers-reduced-motion:reduce){
-  .hero h1 .hero-intro,
-  .hero h1 .hero-name{
+  .hero h1 .hero-letter{
     animation:none!important;
     color:#ffffff!important;
     -webkit-text-fill-color:#ffffff!important;
+    transform:none!important;
   }
 }
 </style>
 
 </head><body><div id="scroll-progress" aria-hidden="true"></div><nav class="nav"><div class="wrap navin"><a class="brand" href="index.html"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><span>PRIYANKA BALONI</span></a><div class="links"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#skills">Skills</a><a href="index.html#certifications">Certifications</a></div><div class="navcta"><a class="pill" href="assets/resume.pdf" target="_blank">Resume ↗</a><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a></div></div></nav><main>
-<section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1><span class="hero-intro">Hi, I'm</span> <span class="hero-name">Priyanka Baloni.</span></h1><div class="eyebrow">SENIOR UI/UX DESIGNER · PRODUCT DESIGNER</div><p class="lead">6+ years designing scalable web and mobile experiences across SaaS, Enterprise, FinTech, EdTech, CRM, E-commerce, Logistics and Healthcare — from discovery and UX architecture to high-fidelity UI and developer handoff.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn ghost" href="mailto:Priyabidaliya@gmail.com">Let’s work together ↗</a></div><div class="actions"><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a><a class="pill" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div><div class="photo reveal"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><div class="badge one"><b>6+</b>years experience</div><div class="badge two"><b>End-to-end</b>product design</div></div></div></section>
+<section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1><span class="hero-intro"><span class="hero-letter" style="--i:0">H</span><span class="hero-letter" style="--i:1">i</span><span class="hero-letter" style="--i:2">,</span><span class="hero-space">&nbsp;</span><span class="hero-letter" style="--i:3">I</span><span class="hero-letter" style="--i:4">'</span><span class="hero-letter" style="--i:5">m</span></span> <span class="hero-name"><span class="hero-letter" style="--i:0">P</span><span class="hero-letter" style="--i:1">r</span><span class="hero-letter" style="--i:2">i</span><span class="hero-letter" style="--i:3">y</span><span class="hero-letter" style="--i:4">a</span><span class="hero-letter" style="--i:5">n</span><span class="hero-letter" style="--i:6">k</span><span class="hero-letter" style="--i:7">a</span><span class="hero-space">&nbsp;</span><span class="hero-letter" style="--i:8">B</span><span class="hero-letter" style="--i:9">a</span><span class="hero-letter" style="--i:10">l</span><span class="hero-letter" style="--i:11">o</span><span class="hero-letter" style="--i:12">n</span><span class="hero-letter" style="--i:13">i</span><span class="hero-letter" style="--i:14">.</span></span></h1><div class="eyebrow">SENIOR UI/UX DESIGNER · PRODUCT DESIGNER</div><p class="lead">6+ years designing scalable web and mobile experiences across SaaS, Enterprise, FinTech, EdTech, CRM, E-commerce, Logistics and Healthcare — from discovery and UX architecture to high-fidelity UI and developer handoff.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn ghost" href="mailto:Priyabidaliya@gmail.com">Let’s work together ↗</a></div><div class="actions"><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a><a class="pill" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div><div class="photo reveal"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><div class="badge one"><b>6+</b>years experience</div><div class="badge two"><b>End-to-end</b>product design</div></div></div></section>
 <div class="marquee" aria-label="Design capabilities">
   <div class="marquee-track">
     <div class="marquee-group">
