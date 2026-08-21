@@ -1,9 +1,7 @@
-# Priyanka Baloni Portfolio — V5
+# Priyanka Baloni Portfolio — V22 Marquee Continuous Fix
 
-Balanced project showcase with real product screens, responsive alignment, and +N screen indicators.
-
-
-V16 Motion Final: seamless infinite marquee with no blank loop gap and tighter transition into Selected Work.
-
-
-V18 marquee fix: seamless continuous loop, no active Product Design highlight, and Selected Work heading is visible without reveal-induced blank space.
+This version fixes the marquee loop so it continuously cycles without a blank gap.
+- Uses three identical groups.
+- Animates by exactly one group width (33.333333%).
+- No active/highlight state on Product Design.
+- Linear, immediate, infinite motion.
