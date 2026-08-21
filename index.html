@@ -539,6 +539,275 @@ h1,h2,h3,h4,h5,h6,
 }
 </style>
 
+
+<style id="v37-hero-contact-motion">
+/* V37 — premium Hero + Contact motion */
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  left:-260px;
+  top:-220px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(216,255,98,.08),transparent 68%);
+  pointer-events:none;
+  animation:heroGlow 8s ease-in-out infinite alternate;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  right:12%;
+  bottom:-300px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(127,232,255,.055),transparent 68%);
+  pointer-events:none;
+  animation:heroGlow2 10s ease-in-out infinite alternate;
+}
+@keyframes heroGlow{
+  from{transform:translate3d(0,0,0) scale(.9);opacity:.55}
+  to{transform:translate3d(150px,90px,0) scale(1.18);opacity:1}
+}
+@keyframes heroGlow2{
+  from{transform:translate3d(0,0,0) scale(.85);opacity:.35}
+  to{transform:translate3d(-90px,-100px,0) scale(1.12);opacity:.8}
+}
+
+/* Hero title: smooth word reveal */
+.hero h1{
+  animation:heroTitleReveal 1.05s cubic-bezier(.2,.75,.25,1) both!important;
+  will-change:transform,opacity,filter;
+}
+@keyframes heroTitleReveal{
+  from{opacity:0;transform:translateY(32px);filter:blur(7px)}
+  to{opacity:1;transform:none;filter:none}
+}
+
+/* Hero role + paragraph + actions */
+.hero .role,
+.hero .eyebrow,
+.hero .hero-role{
+  animation:heroMetaIn .7s .35s cubic-bezier(.2,.75,.25,1) both;
+}
+.hero p.copy,
+.hero .copy{
+  animation:heroMetaIn .8s .46s cubic-bezier(.2,.75,.25,1) both;
+}
+.hero .actions,
+.hero .buttons,
+.hero .cta-row{
+  animation:heroMetaIn .75s .58s cubic-bezier(.2,.75,.25,1) both;
+}
+.hero .socials,
+.hero .social-links{
+  animation:heroMetaIn .7s .70s cubic-bezier(.2,.75,.25,1) both;
+}
+@keyframes heroMetaIn{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:none}
+}
+
+/* Hero image: float + subtle depth */
+.hero .photo{
+  animation:heroPhotoFloat 6s ease-in-out 1.15s infinite alternate!important;
+  will-change:transform;
+}
+@keyframes heroPhotoFloat{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(0,-8px,0)}
+}
+
+/* Hero CTA polish */
+.hero .btn{
+  transition:transform .3s cubic-bezier(.2,.75,.25,1),box-shadow .3s ease,background .3s ease;
+}
+.hero .btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px rgba(0,0,0,.22);
+}
+
+/* ---------- CONTACT ---------- */
+.contact{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:linear-gradient(115deg,#c9ff6b 0%,#b6efa1 42%,#87dfe8 100%);
+  background-size:180% 180%;
+  animation:contactGradient 12s ease-in-out infinite alternate;
+}
+@keyframes contactGradient{
+  0%{background-position:0% 50%}
+  100%{background-position:100% 50%}
+}
+
+/* Moving soft light across contact */
+.contact:after{
+  content:"";
+  position:absolute;
+  width:55%;
+  height:180%;
+  top:-40%;
+  left:-65%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.20),transparent);
+  transform:skewX(-18deg);
+  pointer-events:none;
+  z-index:0;
+  animation:contactSweep 7s ease-in-out infinite;
+}
+@keyframes contactSweep{
+  0%,20%{left:-65%;opacity:0}
+  35%{opacity:1}
+  70%{left:115%;opacity:.7}
+  100%{left:125%;opacity:0}
+}
+
+/* Keep contact content above the animated layers */
+.contact>*{
+  position:relative;
+  z-index:1;
+}
+
+/* Contact heading entrance */
+.contact .title,
+.contact h2{
+  animation:contactTitleIn .9s cubic-bezier(.2,.75,.25,1) both;
+}
+.contact .copy{
+  animation:contactCopyIn .7s .18s cubic-bezier(.2,.75,.25,1) both;
+}
+.contact .btn,
+.contact .actions a{
+  animation:contactButtonIn .65s .32s cubic-bezier(.2,.75,.25,1) both;
+}
+@keyframes contactTitleIn{
+  from{opacity:0;transform:translateY(30px) scale(.98);filter:blur(5px)}
+  to{opacity:1;transform:none;filter:none}
+}
+@keyframes contactCopyIn{
+  from{opacity:0;transform:translateY(16px)}
+  to{opacity:1;transform:none}
+}
+@keyframes contactButtonIn{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:none}
+}
+
+/* Contact buttons */
+.contact .btn{
+  transition:transform .3s cubic-bezier(.2,.75,.25,1),box-shadow .3s ease,background .3s ease;
+}
+.contact .btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 28px rgba(0,0,0,.18);
+}
+
+/* Respect reduced-motion */
+@media(prefers-reduced-motion:reduce){
+  .hero:before,.hero:after,.hero h1,.hero .role,.hero p.copy,
+  .hero .copy,.hero .actions,.hero .buttons,.hero .cta-row,
+  .hero .socials,.hero .social-links,.hero .photo,
+  .contact,.contact:after,.contact .title,.contact h2,
+  .contact .copy,.contact .btn,.contact .actions a{
+    animation:none!important;
+  }
+}
+</style>
+
+
+<style id="v38-hero-name-color-motion">
+/* V38 — animated color + motion for BOTH parts of the hero name */
+.hero h1{
+  perspective:900px;
+}
+
+/* "Hi, I'm" — white/lime animated color */
+.hero h1{
+  background:linear-gradient(
+    110deg,
+    #ffffff 0%,
+    #ffffff 28%,
+    #d8ff62 42%,
+    #ffffff 56%,
+    #ffffff 100%
+  );
+  background-size:240% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent!important;
+  animation:
+    heroNameColorV38 5s ease-in-out infinite,
+    heroNameFloatV38 4.5s ease-in-out infinite!important;
+}
+
+/* "Priyanka Baloni." — stronger lime highlight motion */
+.hero h1 .hero-name{
+  display:inline-block;
+  background:linear-gradient(
+    105deg,
+    #ffffff 0%,
+    #ffffff 18%,
+    #d8ff62 38%,
+    #d8ff62 58%,
+    #ffffff 78%,
+    #ffffff 100%
+  );
+  background-size:260% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent!important;
+  animation:
+    heroNameHighlightV38 4.2s ease-in-out infinite,
+    heroNameFloatNameV38 3.8s ease-in-out infinite!important;
+  will-change:background-position,transform;
+}
+
+@keyframes heroNameColorV38{
+  0%,100%{background-position:100% 50%}
+  50%{background-position:0% 50%}
+}
+
+@keyframes heroNameHighlightV38{
+  0%,100%{background-position:100% 50%}
+  50%{background-position:0% 50%}
+}
+
+@keyframes heroNameFloatV38{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(0,-3px,0)}
+}
+
+@keyframes heroNameFloatNameV38{
+  0%,100%{transform:translate3d(0,0,0) scale(1)}
+  50%{transform:translate3d(0,-5px,0) scale(1.008)}
+}
+
+/* Keep the requested role color */
+.hero .role,
+.hero .eyebrow,
+.hero .hero-role,
+.hero [class*="role"]{
+  color:#d8ff62!important;
+  -webkit-text-fill-color:#d8ff62!important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero h1,
+  .hero h1 .hero-name{
+    animation:none!important;
+    background:none!important;
+    -webkit-text-fill-color:#ffffff!important;
+  }
+}
+</style>
+
 </head><body><div id="scroll-progress" aria-hidden="true"></div><nav class="nav"><div class="wrap navin"><a class="brand" href="index.html"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><span>PRIYANKA BALONI</span></a><div class="links"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#skills">Skills</a><a href="index.html#certifications">Certifications</a></div><div class="navcta"><a class="pill" href="assets/resume.pdf" target="_blank">Resume ↗</a><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a></div></div></nav><main>
 <section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1>Hi, I'm <span class="hero-name">Priyanka Baloni.</span></h1><div class="eyebrow">SENIOR UI/UX DESIGNER · PRODUCT DESIGNER</div><p class="lead">6+ years designing scalable web and mobile experiences across SaaS, Enterprise, FinTech, EdTech, CRM, E-commerce, Logistics and Healthcare — from discovery and UX architecture to high-fidelity UI and developer handoff.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn ghost" href="mailto:Priyabidaliya@gmail.com">Let’s work together ↗</a></div><div class="actions"><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a><a class="pill" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div><div class="photo reveal"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><div class="badge one"><b>6+</b>years experience</div><div class="badge two"><b>End-to-end</b>product design</div></div></div></section>
 <div class="marquee" aria-label="Design capabilities">
