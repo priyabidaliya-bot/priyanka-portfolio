@@ -42,6 +42,36 @@
   .being-thumbs{padding:8px}.being-thumb{flex-basis:58px;height:40px}
 }
 </style>
+<style id="v16-motion">
+/* V16 — subtle premium motion */
+@keyframes heroIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes floatPhoto{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes marqueeMove{to{transform:translateX(-50%)}}
+.hero .reveal{animation:heroIn .85s cubic-bezier(.2,.75,.25,1) both}
+.hero .photo.reveal{animation:heroIn .95s .12s cubic-bezier(.2,.75,.25,1) both}
+.hero .photo img{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.hero .photo:hover img{transform:scale(1.018) translateY(-3px)}
+.btn,.pill,.other-arrow,.more-count{transition:transform .25s ease,background .25s ease,border-color .25s ease,color .25s ease,box-shadow .25s ease}
+.btn:hover,.pill:hover{transform:translateY(-2px)}
+.btn.primary:hover{box-shadow:0 10px 30px rgba(216,255,98,.14)}
+.project,.other-card,.box,.metric,.skill,.cert{transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .35s ease,box-shadow .45s ease}
+.project:hover{box-shadow:0 22px 60px rgba(0,0,0,.18)}
+.other-card:hover{box-shadow:0 18px 45px rgba(0,0,0,.16)}
+.project-gallery img,.other-image img{will-change:transform}
+.project-gallery .gallery-main img,.project-gallery .gallery-side img{transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.project:hover .gallery-main img{transform:scale(1.035)}
+.project:hover .gallery-side img{transform:scale(1.045)}
+.other-card:hover .other-image img{transform:scale(1.045)}
+.marquee .track{width:max-content;animation:marqueeMove 28s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.nav{transition:background .3s ease,box-shadow .3s ease,border-color .3s ease}
+.nav.scrolled{background:rgba(7,9,12,.94);box-shadow:0 10px 35px rgba(0,0,0,.22);border-bottom-color:rgba(255,255,255,.14)}
+.reveal{will-change:opacity,transform}
+.reveal.show{transition:opacity .75s cubic-bezier(.2,.75,.25,1),transform .75s cubic-bezier(.2,.75,.25,1)}
+.project.reveal.show:nth-child(1){transition-delay:.02s}.project.reveal.show:nth-child(2){transition-delay:.09s}.project.reveal.show:nth-child(3){transition-delay:.16s}
+.other-card.reveal.show:nth-child(1){transition-delay:.02s}.other-card.reveal.show:nth-child(2){transition-delay:.08s}.other-card.reveal.show:nth-child(3){transition-delay:.14s}.other-card.reveal.show:nth-child(4){transition-delay:.20s}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.marquee .track{animation:none!important}.hero .reveal{animation:none!important}}
+</style>
 </head><body><nav class="nav"><div class="wrap navin"><a class="brand" href="index.html"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><span>PRIYANKA BALONI</span></a><div class="links"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#skills">Skills</a><a href="index.html#certifications">Certifications</a></div><div class="navcta"><a class="pill" href="assets/resume.pdf" target="_blank">Resume ↗</a><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a></div></div></nav><main>
 <section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1>Hi, I'm Priyanka Baloni.</h1><div class="eyebrow">SENIOR UI/UX DESIGNER · PRODUCT DESIGNER</div><p class="lead">6+ years designing scalable web and mobile experiences across SaaS, Enterprise, FinTech, EdTech, CRM, E-commerce, Logistics and Healthcare — from discovery and UX architecture to high-fidelity UI and developer handoff.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn ghost" href="mailto:Priyabidaliya@gmail.com">Let’s work together ↗</a></div><div class="actions"><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a><a class="pill" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div><div class="photo reveal"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><div class="badge one"><b>6+</b>years experience</div><div class="badge two"><b>End-to-end</b>product design</div></div></div></section>
 <div class="marquee"><div class="wrap track"><b>PRODUCT DESIGN</b><span>UX RESEARCH</span><span>INFORMATION ARCHITECTURE</span><span>DESIGN SYSTEMS</span><span>PROTOTYPING</span><span>DEVELOPER HANDOFF</span><b>PRODUCT DESIGN</b><span>UX RESEARCH</span></div></div>
@@ -49,89 +79,12 @@
 <article class="project reveal"><div class="project-info"><div><div class="label">01 · INTOTO</div><h3>Intoto</h3><p>End-to-end student and university ecosystem spanning discovery, applications, communities, connections, events, mobility, travel and institutional workflows.</p><div class="tags"><span class="tag">EdTech</span><span class="tag">SaaS</span><span class="tag">Web + Mobile</span><span class="tag">Enterprise</span></div></div><div class="actions"><a class="btn ghost" href="case-intoto.html">View case study ↗</a><a class="btn ghost" href="https://apps.apple.com/us/app/intoto-edu/id6467397347" target="_blank" rel="noopener noreferrer">Open product ↗</a></div></div><div class="project-visual"><div class="project-gallery"><div class="gallery-main"><img src="assets/intoto-connect.webp" alt="Intoto student connection screen"></div><div class="gallery-side"><figure><img src="assets/intoto-chat.webp" alt="Intoto chat screen"></figure><figure><img src="assets/intoto-profile.webp" alt="Intoto profile screen"></figure></div><span class="gallery-note">Selected product screens</span><a class="more-count" href="./case-intoto.html" aria-label="View 2 more Intoto screens"><b>+2</b> more</a></div></div></article>
 <article class="project reveal"><div class="project-info"><div><div class="label">02 · BUSINESSBAY</div><h3>BusinessBay</h3><p>Digital business platform combining business profiles, NFC cards, social sharing, appointment scheduling, templates, dashboards and resume creation.</p><div class="tags"><span class="tag">Marketplace</span><span class="tag">Mobile</span><span class="tag">Business Tools</span></div></div><div class="actions"><a class="btn ghost" href="case-businessbay.html">View case study ↗</a><a class="btn ghost" href="https://apps.apple.com/in/app/businessbay/id6769306847" target="_blank" rel="noopener noreferrer">Open product ↗</a></div></div><div class="project-visual v2"><div class="project-gallery"><div class="gallery-main"><img src="assets/business-nfc.webp" alt="BusinessBay NFC card experience"></div><div class="gallery-side"><figure><img src="assets/business-dashboard.webp" alt="BusinessBay dashboard"></figure><figure><img src="assets/business-appointment.webp" alt="BusinessBay appointment experience"></figure></div><span class="gallery-note">Selected product screens</span><a class="more-count" href="./case-businessbay.html" aria-label="View 3 more BusinessBay screens"><b>+3</b> more</a></div></div></article>
 <article class="project reveal"><div class="project-info"><div><div class="label">03 · BEING INDIAN</div><h3>Being Indian</h3><p>Community and local discovery ecosystem for the Indian community in Canada, bringing businesses, associations, events, magazine, blogs and news together.</p><div class="tags"><span class="tag">Marketplace</span><span class="tag">Community</span><span class="tag">Content</span><span class="tag">Events</span></div></div><div class="actions"><a class="btn ghost" href="case-being-indian.html">View case study ↗</a><a class="btn ghost" href="https://bind.webthreex.com/" target="_blank" rel="noopener noreferrer">Open product ↗</a></div></div><div class="project-visual v3"><div class="project-gallery"><div class="gallery-main"><img src="assets/being-01-home.webp" alt="Being Indian home page"></div><div class="gallery-side"><figure><img src="assets/being-04-search.webp" alt="Being Indian restaurant search"></figure><figure><img src="assets/being-11-community.webp" alt="Being Indian community associations"></figure></div><span class="gallery-note">01–15 · Product screens</span><a class="more-count" href="#being-gallery" aria-label="View all 15 Being Indian product screens"><b>+12</b> more</a></div></div></article>
-<div class="other-projects-head">
-  <div>
-    <div class="label">OTHER PROJECTS</div>
-    <h3 class="other-title">More work, one click away.</h3>
-  </div>
-
-  <p class="copy">
-    Selected additional projects shown as compact previews.
-    Click a project to open the live product.
-  </p>
-</div>
-
-<div class="other-grid">
-
-  <a class="other-card"
-     href="https://gamerpe.en.softonic.com/android"
-     target="_blank"
-     rel="noopener noreferrer">
-    <div class="other-image">
-      <img src="assets/gamerpe-dashboard.webp"
-           alt="GamerPe mobile app dashboard">
-    </div>
-    <div class="other-meta">
-      <div>
-        <div class="other-name">GamerPe</div>
-        <div class="other-type">UI/UX Design · Mobile App</div>
-      </div>
-      <span class="other-arrow">↗</span>
-    </div>
-  </a>
-
-  <a class="other-card"
-     href="https://khiladi-adda-play-games-and.en.download.it/android"
-     target="_blank"
-     rel="noopener noreferrer">
-    <div class="other-image">
-      <img src="assets/khiladi-adda.webp"
-           alt="Khiladi Adda mobile app">
-    </div>
-    <div class="other-meta">
-      <div>
-        <div class="other-name">Khiladi Adda</div>
-        <div class="other-type">UI/UX Design · Gaming / eSports</div>
-      </div>
-      <span class="other-arrow">↗</span>
-    </div>
-  </a>
-
-  <a class="other-card"
-     href="https://sheluxe.io/"
-     target="_blank"
-     rel="noopener noreferrer">
-    <div class="other-image">
-      <img src="assets/luxelace.webp"
-           alt="LUXELACE website design">
-    </div>
-    <div class="other-meta">
-      <div>
-        <div class="other-name">LUXELACE</div>
-        <div class="other-type">UI/UX Design · E-commerce</div>
-      </div>
-      <span class="other-arrow">↗</span>
-    </div>
-  </a>
-
-  <a class="other-card"
-     href="https://vuezen.io/"
-     target="_blank"
-     rel="noopener noreferrer">
-    <div class="other-image">
-      <img src="assets/vuezen.webp"
-           alt="VUEZEN website design">
-    </div>
-    <div class="other-meta">
-      <div>
-        <div class="other-name">VUEZEN</div>
-        <div class="other-type">UI/UX Design · E-commerce</div>
-      </div>
-      <span class="other-arrow">↗</span>
-    </div>
-  </a>
-
-</div>
+</div><div class="other-projects-head"><div><div class="label">OTHER PROJECTS</div><h3 class="other-title">More work, one click away.</h3></div><p class="copy">Selected additional projects shown as compact previews. Click a project to open the live product.</p></div><div class="other-grid">
+<a class="other-card" href="https://gamerpe.en.softonic.com/android" target="_blank" rel="noopener noreferrer"><div class="other-image"><img src="assets/gamerpe-dashboard.webp" alt="GamerPe mobile app dashboard"></div><div class="other-meta"><div><div class="other-name">GamerPe</div><div class="other-type">UI/UX Design · Mobile App</div></div><span class="other-arrow">↗</span></div></a>
+<a class="other-card" href="https://khiladi-adda-play-games-and.en.download.it/android" target="_blank" rel="noopener noreferrer"><div class="other-image"><img src="assets/khiladi-adda.webp" alt="Khiladi Adda mobile app"></div><div class="other-meta"><div><div class="other-name">Khiladi Adda</div><div class="other-type">UI/UX Design · Gaming / eSports</div></div><span class="other-arrow">↗</span></div></a>
+<a class="other-card" href="https://sheluxe.io/" target="_blank" rel="noopener noreferrer"><div class="other-image"><img src="assets/luxelace.webp" alt="LUXELACE website design"></div><div class="other-meta"><div><div class="other-name">LUXELACE</div><div class="other-type">UI/UX Design · E-commerce</div></div><span class="other-arrow">↗</span></div></a>
+<a class="other-card" href="https://vuezen.io/" target="_blank" rel="noopener noreferrer"><div class="other-image"><img src="assets/vuezen.webp" alt="VUEZEN website design"></div><div class="other-meta"><div><div class="other-name">VUEZEN</div><div class="other-type">UI/UX Design · E-commerce</div></div><span class="other-arrow">↗</span></div></a>
+</div></section>
 <section><div class="wrap reveal"><div class="head"><div><div class="label">02 / PRODUCT IMPACT</div><h2 class="title">Beyond screens.<br>Into product thinking.</h2></div><p class="copy">I work across product structure, workflows, interface systems and the details that help complex products scale.</p></div><div class="metrics"><div class="metric"><b>6+</b><span>Years experience</span></div><div class="metric"><b>03</b><span>Featured products</span></div><div class="metric"><b>UX → UI</b><span>End-to-end ownership</span></div><div class="metric"><b>8+</b><span>Product domains</span></div></div></div></section>
 <section id="about"><div class="wrap reveal"><div class="head"><div><div class="label">03 / ABOUT</div><h2 class="title">Design with<br>product thinking.</h2></div><p class="copy">I turn complex business requirements into scalable, user-friendly experiences — from information architecture and workflows to high-fidelity UI, systems and handoff.</p></div><div class="about"><div class="about-main"><p>My work sits at the intersection of <strong>business goals, user needs and visual systems.</strong> I enjoy making complicated products easier to understand, navigate and use.</p></div><div class="stats"><div class="stat"><b>Enterprise</b><span>Complex workflows & role-based products</span></div><div class="stat"><b>Mobile</b><span>Consumer and business experiences</span></div><div class="stat"><b>Systems</b><span>Reusable components & design patterns</span></div><div class="stat"><b>Delivery</b><span>Prototype to developer handoff</span></div></div></div></div></section>
 <section id="experience"><div class="wrap reveal"><div class="head"><div><div class="label">04 / EXPERIENCE</div><h2 class="title">Career<br>timeline.</h2></div><p class="copy">Product design across enterprise and consumer products.</p></div><div class="timeline"><div class="job"><div class="jobtop"><div><h3>Senior UI/UX Designer</h3><div class="company">Metaversity Technologies Pvt. Ltd.</div></div><div class="date">Sep 2022 — Present</div></div><p>End-to-end product design across EdTech, SaaS, FinTech, CRM, Enterprise Applications, E-commerce and Gaming.</p><ul><li>Led UX for enterprise modules, user journeys, information architecture, wireframes and prototypes.</li><li>Built scalable design systems and reusable components.</li><li>Designed responsive dashboards for university, student, agent and admin roles.</li><li>Simplified complex admission and visa workflows.</li></ul></div><div class="job"><div class="jobtop"><div><h3>UI/UX Designer</h3><div class="company">Techbeliever Technologies (Khiladi Adda)</div></div><div class="date">Dec 2021 — Aug 2022</div></div><p>Designed fantasy gaming and micro eSports experiences across web and mobile, including wallets, tournaments, contests, profiles and leaderboards.</p></div><div class="job"><div class="jobtop"><div><h3>UI/Graphic Designer</h3><div class="company">Appsmediaz Technologies</div></div><div class="date">Jul 2020 — Nov 2021</div></div><p>Designed responsive websites and mobile applications for business and healthcare-focused products, alongside branding assets and client work.</p></div></div></div></section>
@@ -189,6 +142,29 @@
   thumbs.forEach((t,i)=>t.addEventListener('click',()=>{index=i;render();}));
   modal.addEventListener('click',e=>{if(e.target===modal)shut();});
   document.addEventListener('keydown',e=>{if(!modal.classList.contains('open'))return;if(e.key==='Escape')shut();if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1);});
+})();
+</script>
+<script id="v16-motion-script">
+(function(){
+  const nav=document.querySelector('.nav');
+  const setNav=()=>nav&&nav.classList.toggle('scrolled',window.scrollY>24);
+  setNav(); window.addEventListener('scroll',setNav,{passive:true});
+
+  const revealEls=[...document.querySelectorAll('.reveal')];
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -8% 0px'});
+    revealEls.forEach(el=>io.observe(el));
+  }else revealEls.forEach(el=>el.classList.add('show'));
+
+  document.querySelectorAll('.other-card').forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=(i*70)+'ms';});
+
+  const photo=document.querySelector('.photo');
+  if(photo && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    window.addEventListener('scroll',()=>{
+      const y=Math.min(window.scrollY,500);
+      photo.style.transform='translateY('+(-y*.035)+'px)';
+    },{passive:true});
+  }
 })();
 </script>
 </body></html>
