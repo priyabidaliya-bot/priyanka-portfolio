@@ -303,7 +303,94 @@ body{overflow-x:hidden}
 .job{transition:transform .35s ease}.job:hover{transform:translateX(5px)}
 #scroll-progress{position:fixed;left:0;top:0;width:0;height:2px;background:var(--lime);z-index:100;box-shadow:0 0 12px rgba(216,255,98,.35);pointer-events:none}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.testimonials-track{animation:none!important}}
-</style></head><body><div id="scroll-progress" aria-hidden="true"></div><nav class="nav"><div class="wrap navin"><a class="brand" href="index.html"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><span>PRIYANKA BALONI</span></a><div class="links"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#skills">Skills</a><a href="index.html#certifications">Certifications</a></div><div class="navcta"><a class="pill" href="assets/resume.pdf" target="_blank">Resume ↗</a><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a></div></div></nav><main>
+</style>
+<style id="v33-typography-enhancement">
+/* V33 — stronger readable typography + larger skill tabs + white hover */
+:root{
+  --text-main:#f2f5f7;
+  --text-body:#b8c3cd;
+  --text-muted:#8f9aa6;
+  --text-soft:#aab5c0;
+}
+
+/* Improve readability across the portfolio without changing the visual system */
+body{color:var(--text-body)}
+p,.copy,.description,.meta,.sub,.role,.date,.small,.eyebrow,.caption{
+  color:var(--text-body)!important;
+}
+.hero .copy,.head .copy{color:#bfc9d2!important}
+nav a,.nav a,.topnav a{color:#b2bcc6}
+.label,.section-label,.kicker{color:var(--lime)!important}
+
+/* Skill / toolkit cards: make chips readable at normal viewing distance */
+.skill .tag,
+.skills .tag,
+.skill-card .tag,
+.tool-tag,
+.domain-tag,
+.tag{
+  font-size:12px!important;
+  line-height:1.25!important;
+  min-height:36px!important;
+  padding:9px 14px!important;
+  color:#cbd4dc!important;
+  border-color:rgba(255,255,255,.14)!important;
+  background:rgba(255,255,255,.018)!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  white-space:nowrap;
+}
+
+/* Strong, obvious hover state for every tab/chip */
+.skill .tag:hover,
+.skills .tag:hover,
+.skill-card .tag:hover,
+.tool-tag:hover,
+.domain-tag:hover,
+.tag:hover{
+  color:#050607!important;
+  background:#fff!important;
+  border-color:#fff!important;
+  transform:translateY(-2px)!important;
+  box-shadow:0 8px 22px rgba(255,255,255,.10)!important;
+}
+
+/* Product Design / Domains / Tools / Education card body text */
+.skill h3,.skill-card h3,
+.skills h3,.tools h3,.domains h3,.education h3{
+  color:#f1f4f6!important;
+}
+.skill p,.skill-card p,.education p,.tools p,.domains p{
+  color:#b7c1cb!important;
+  font-size:14px!important;
+  line-height:1.65!important;
+}
+
+/* Make the selected/featured skill card text more balanced */
+.skill{padding:30px!important}
+.skill .tags,.skill .tag-list{gap:9px!important}
+
+/* General small UI text: slightly brighter */
+.project .meta,.project .desc,
+.timeline .meta,.job .meta,
+.footer,.footer a{
+  color:#aeb9c3!important;
+}
+
+/* Keep lime reserved for hierarchy, not body copy */
+a:not(.btn):not(.pill):hover{color:#fff}
+
+/* Mobile */
+@media(max-width:700px){
+  .skill .tag,.skills .tag,.skill-card .tag,.tool-tag,.domain-tag,.tag{
+    font-size:11.5px!important;
+    min-height:34px!important;
+    padding:8px 12px!important;
+  }
+}
+</style>
+
+</head><body><div id="scroll-progress" aria-hidden="true"></div><nav class="nav"><div class="wrap navin"><a class="brand" href="index.html"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><span>PRIYANKA BALONI</span></a><div class="links"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="index.html#skills">Skills</a><a href="index.html#certifications">Certifications</a></div><div class="navcta"><a class="pill" href="assets/resume.pdf" target="_blank">Resume ↗</a><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a></div></div></nav><main>
 <section class="hero"><div class="wrap hero-grid"><div class="reveal"><h1>Hi, I'm <span class="hero-name">Priyanka Baloni.</span></h1><div class="eyebrow">SENIOR UI/UX DESIGNER · PRODUCT DESIGNER</div><p class="lead">6+ years designing scalable web and mobile experiences across SaaS, Enterprise, FinTech, EdTech, CRM, E-commerce, Logistics and Healthcare — from discovery and UX architecture to high-fidelity UI and developer handoff.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn ghost" href="mailto:Priyabidaliya@gmail.com">Let’s work together ↗</a></div><div class="actions"><a class="pill" href="https://www.linkedin.com/in/priyanka-baloni-a402b1214/" target="_blank">LinkedIn ↗</a><a class="pill" href="https://www.behance.net/priyankabaloni" target="_blank">Behance ↗</a></div></div><div class="photo reveal"><img src="assets/priyanka.webp" alt="Priyanka Baloni"><div class="badge one"><b>6+</b>years experience</div><div class="badge two"><b>End-to-end</b>product design</div></div></div></section>
 <div class="marquee" aria-label="Design capabilities">
   <div class="marquee-track">
